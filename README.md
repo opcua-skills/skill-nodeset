@@ -48,6 +48,14 @@ There's currently an open pull-request (https://github.com/OPCFoundation/UA-Mode
 		  sailavid/ua-modelcompiler \
 		   /model/src/SkillsModel Opc.Ua.Skills /model/src/Published
 	```
+5. To build an example, run the following:
+	```bash
+	docker run \
+		  --mount type=bind,source=$(pwd),target=/model/src \
+		  --entrypoint "/app/PublishModel.sh" \
+		  sailavid/ua-modelcompiler \
+		   /model/src/exampleModel/LinearAxisWithGripperModel Example.LinearAxisWithGripper /model/src/Examples
+	```
 
 This will create all the compiled NodeSet2.xml files inside the `Published` folder.
 With this command you can also compiler your own model files, just adapt the last line accordingly.

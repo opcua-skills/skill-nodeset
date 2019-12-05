@@ -1,4 +1,4 @@
-name: Main
+name: Examples
 
 on: [push, pull_request]
 
@@ -10,16 +10,16 @@ jobs:
     steps:
       - name: Git checkout
         uses: actions/checkout@v1
-      - name: Compile model
+      - name: Compile Example.LinearAxisWithGripper
         uses: docker://sailavid/ua-modelcompiler
         with:
           entrypoint: /bin/bash
-          args: -c "cd /app && /app/PublishModel.sh /github/workspace/SkillsModel Opc.Ua.Skills /github/workspace/Published
+          args: -c "cd /app && /app/PublishModel.sh /github/workspace/exampleModel/LinearAxisWithGripperModel Example.LinearAxisWithGripper /github/workspace/Examples"
       - name: Upload compiled model
         uses: actions/upload-artifact@v1
         with:
-          name: Published
-          path: Published
+          name: Examples
+          path: Examples
       - name: Extract branch name
         shell: bash
         run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
@@ -28,12 +28,12 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add -f ${GITHUB_WORKSPACE}/Published/*
+          git add -f ${GITHUB_WORKSPACE}/Examples/*
           git commit -m "[skip ci] Deploy from GitHub Action" -a
-      - name: Push compiled model to published branch
+      - name: Push compiled model to examples branch
         if: steps.extract_branch.outputs.branch == 'master'
         uses: ad-m/github-push-action@master
         with:
-          branch: ${{ steps.extract_branch.outputs.branch }}-published
+          branch: ${{ steps.extract_branch.outputs.branch }}-examples
           force: true
           github_token: ${{ secrets.GITHUB_TOKEN }}

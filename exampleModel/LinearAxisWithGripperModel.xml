@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ModelDesign
+        xmlns:uax="http://opcfoundation.org/UA/2008/02/Types.xsd"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:OpcUa="http://opcfoundation.org/UA/"
+        xmlns:DI="http://opcfoundation.org/UA/DI/"
+        xmlns:SKILLS="http://opcfoundation.org/UA/Skills/"
+        xmlns:EX_LIN_AXIS_GRIP="https://example.com/UA/Examples/LinearAxisWithGripper/"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        TargetNamespace="https://example.com/UA/Examples/LinearAxisWithGripper/"
+        TargetXmlNamespace="https://example.com/UA/Examples/LinearAxisWithGripper/"
+        TargetVersion="0.9.1"
+        TargetPublicationDate="2018-06-24T00:00:00Z"
+        xmlns="http://opcfoundation.org/UA/ModelDesign.xsd">
+
+    <Namespaces>
+        <!-- Do not change the order here. Otherwise the nodeIds inside extension objects are not correct anymore.-->
+        <Namespace Name="ExampleLinearAxisWithGripper" Prefix="Example.LinearAxisWithGripper"
+                   XmlNamespace="https://example.com/UA/Examples/LinearAxisWithGripper/Types.xsd"
+                   XmlPrefix="Example.LinearAxisWithGripper">https://example.com/UA/Examples/LinearAxisWithGripper/</Namespace>
+        <Namespace Name="OpcUa" Version="1.03" PublicationDate="2013-12-02T00:00:00Z" Prefix="Opc.Ua"
+                   InternalPrefix="Opc.Ua.Server" XmlNamespace="http://opcfoundation.org/UA/2008/02/Types.xsd"
+                   XmlPrefix="OpcUa">http://opcfoundation.org/UA/</Namespace>
+        <Namespace Name="OpcUaDi" Prefix="Opc.Ua.Di" XmlNamespace="http://opcfoundation.org/UA/DI/Types.xsd"
+                   XmlPrefix="DI" FilePath="OpcUaDiModel">http://opcfoundation.org/UA/DI/</Namespace>
+        <Namespace Name="OpcUaSkills" Prefix="Opc.Ua.Skills"
+                   XmlNamespace="http://opcfoundation.org/UA/Skills/Types.xsd" XmlPrefix="Skills"
+                   FilePath="../SkillsModel">http://opcfoundation.org/UA/Skills/</Namespace>
+    </Namespaces>
+
+
+    <Object SymbolicName="EX_LIN_AXIS_GRIP:ExampleLinearAxisWithGripperNamespaceMetadata" TypeDefinition="OpcUa:NamespaceMetadataType">
+        <BrowseName>https://example.com/UA/Examples/LinearAxisWithGripper/</BrowseName>
+        <Children>
+            <Property SymbolicName="OpcUa:NamespaceUri" DataType="OpcUa:String">
+                <DefaultValue>
+                    <uax:String>https://example.com/UA/Examples/LinearAxisWithGripper/</uax:String>
+                </DefaultValue>
+            </Property>
+            <Property SymbolicName="OpcUa:NamespaceVersion" DataType="OpcUa:String">
+                <DefaultValue>
+                    <uax:String>1.00</uax:String>
+                </DefaultValue>
+            </Property>
+            <Property SymbolicName="OpcUa:NamespacePublicationDate" DataType="OpcUa:DateTime">
+                <DefaultValue>
+                    <uax:DateTime>2019-01-01</uax:DateTime>
+                </DefaultValue>
+            </Property>
+            <Property SymbolicName="OpcUa:IsNamespaceSubset" DataType="OpcUa:Boolean">
+                <DefaultValue>
+                    <uax:Boolean>false</uax:Boolean>
+                </DefaultValue>
+            </Property>
+            <Property SymbolicName="OpcUa:StaticNodeIdTypes" DataType="OpcUa:IdType" ValueRank="Array">
+                <DefaultValue>
+                    <uax:ListOfInt32>
+                        <uax:Int32>0</uax:Int32>
+                    </uax:ListOfInt32>
+                </DefaultValue>
+            </Property>
+            <Property SymbolicName="OpcUa:StaticNumericNodeIdRange" DataType="OpcUa:NumericRange" ValueRank="Array">
+                <DefaultValue>
+                    <uax:ListOfString>
+                        <uax:String>1:65535</uax:String>
+                    </uax:ListOfString>
+                </DefaultValue>
+            </Property>
+            <Property SymbolicName="OpcUa:StaticStringNodeIdPattern" DataType="OpcUa:String">
+                <DefaultValue>
+                    <uax:String></uax:String>
+                </DefaultValue>
+            </Property>
+            <Property SymbolicName="OpcUa:DefaultRolePermissions" ModellingRule="Mandatory" />
+            <Property SymbolicName="OpcUa:DefaultUserRolePermissions" ModellingRule="Mandatory" />
+            <Property SymbolicName="OpcUa:DefaultAccessRestrictions" ModellingRule="Mandatory" />
+        </Children>
+        <References>
+            <Reference IsInverse="true">
+                <ReferenceType>OpcUa:HasComponent</ReferenceType>
+                <TargetId>OpcUa:Server_Namespaces</TargetId>
+            </Reference>
+        </References>
+    </Object>
+
+
+    <Method SymbolicName="EX_LIN_AXIS_GRIP:GripperStartMethodType">
+        <InputArguments>
+            <Argument Name="Span" DataType="OpcUa:Double"/>
+            <Argument Name="Force" DataType="OpcUa:Double"/>
+        </InputArguments>
+        <OutputArguments>
+        </OutputArguments>
+    </Method>
+    <ObjectType SymbolicName="EX_LIN_AXIS_GRIP:IGripperSkillType" BaseType="SKILLS:ISkillType"
+                IsAbstract="false"
+                SupportsEvents="true">
+        <Description>A generic gripper skill type</Description>
+        <Children>
+            <Property SymbolicName="SKILLS:Identifier" DataType="OpcUa:String">
+                <DefaultValue>
+                    <uax:String>GripperSkill</uax:String>
+                </DefaultValue>
+            </Property>
+            <Property SymbolicName="SKILLS:IsInstantiable" DataType="OpcUa:Boolean">
+                <DefaultValue>
+                    <uax:Boolean>False</uax:Boolean>
+                </DefaultValue>
+            </Property>
+            <Object SymbolicName="SKILLS:StateMachine" TypeDefinition="SKILLS:SkillStateMachineType" ModellingRule="Mandatory">
+                <Children>
+                    <!-- Methods -->
+                    <Method SymbolicName="SKILLS:Start" TypeDefinition="EX_LIN_AXIS_GRIP:GripperStartMethodType" ModellingRule="Mandatory"/>
+
+                    <!-- States -->
+                    <Object SymbolicName="SKILLS:Running" TypeDefinition="SKILLS:SkillStateType">
+                        <Children>
+                            <Object SymbolicName="SKILLS:ContinuousParameter" TypeDefinition="OpcUa:BaseObjectType">
+                                <Children>
+                                    <Object SymbolicName="SKILLS:OutputParameter" TypeDefinition="OpcUa:BaseObjectType" ModellingRule="Mandatory">
+                                        <Children>
+                                            <Variable SymbolicName="EX_LIN_AXIS_GRIP:CurrentForce" TypeDefinition="OpcUa:BaseDataVariableType" DataType="OpcUa:Double"
+                                                      ModellingRule="Mandatory" ValueRank="Scalar" AccessLevel="Read">
+                                                <Description>Current force acting on the gripper fingers</Description>
+                                            </Variable>
+                                        </Children>
+                                    </Object>
+                                </Children>
+                            </Object>
+                        </Children>
+                    </Object>
+                </Children>
+            </Object>
+        </Children>
+    </ObjectType>
+
+
+    <Method SymbolicName="EX_LIN_AXIS_GRIP:MoveToAbsStartMethodType">
+        <InputArguments>
+            <Argument Name="Position" DataType="OpcUa:Double"/>
+        </InputArguments>
+    </Method>
+    <ObjectType SymbolicName="EX_LIN_AXIS_GRIP:IMoveToAbsSkillType" BaseType="SKILLS:ISkillType"
+                IsAbstract="false"
+                SupportsEvents="true">
+        <Description>Skill type for a linear axis move to absolute position</Description>
+        <Children>
+            <Property SymbolicName="SKILLS:Identifier" DataType="OpcUa:String">
+                <DefaultValue>
+                    <uax:String>MoveToAbsSkill</uax:String>
+                </DefaultValue>
+            </Property>
+            <Property SymbolicName="SKILLS:IsInstantiable" DataType="OpcUa:Boolean">
+                <DefaultValue>
+                    <uax:Boolean>False</uax:Boolean>
+                </DefaultValue>
+            </Property>
+            <Object SymbolicName="SKILLS:StateMachine" TypeDefinition="SKILLS:SkillStateMachineType" ModellingRule="Mandatory">
+                <Children>
+                    <!-- Methods -->
+                    <Method SymbolicName="SKILLS:Start" TypeDefinition="EX_LIN_AXIS_GRIP:MoveToAbsStartMethodType" ModellingRule="Mandatory"/>
+
+                    <!-- States -->
+                    <Object SymbolicName="SKILLS:Running" TypeDefinition="SKILLS:SkillStateType">
+                        <Children>
+                            <Object SymbolicName="SKILLS:ContinuousParameter" TypeDefinition="OpcUa:BaseObjectType">
+                                <Children>
+                                    <Object SymbolicName="SKILLS:OutputParameter" TypeDefinition="OpcUa:BaseObjectType" ModellingRule="Mandatory">
+                                        <Children>
+                                            <Variable SymbolicName="EX_LIN_AXIS_GRIP:CurrentPosition" TypeDefinition="OpcUa:BaseDataVariableType" DataType="OpcUa:Double"
+                                                      ModellingRule="Mandatory" ValueRank="Scalar" AccessLevel="Read">
+                                                <Description>Current position of the linear axis</Description>
+                                            </Variable>
+                                        </Children>
+                                    </Object>
+                                </Children>
+                            </Object>
+                        </Children>
+                    </Object>
+                </Children>
+            </Object>
+        </Children>
+    </ObjectType>
+
+
+    <!-- ### Variable Types ###-->
+
+    <!-- ### Data Types ###-->
+
+
+</ModelDesign>

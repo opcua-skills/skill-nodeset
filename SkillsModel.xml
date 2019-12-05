@@ -17,7 +17,6 @@
         <Namespace Name="OpcUaSkills" Prefix="Opc.Ua.Skills" XmlNamespace="http://opcfoundation.org/UA/Skills/Types.xsd" XmlPrefix="Skills">http://opcfoundation.org/UA/Skills/</Namespace>
     </Namespaces>
 
-
     <Object SymbolicName="SKILLS:SkillsNamespaceMetadata" TypeDefinition="OpcUa:NamespaceMetadataType">
         <BrowseName>http://opcfoundation.org/UA/Skills/</BrowseName>
         <Children>
@@ -72,11 +71,269 @@
         </References>
     </Object>
 
+
+    <!-- ### Method Types ###-->
+
+    <Method SymbolicName="SKILLS:SkillMethodType">
+        <InputArguments>
+        </InputArguments>
+        <OutputArguments>
+        </OutputArguments>
+    </Method>
+
     <!-- ### Object Types ###-->
 
-    <ObjectType SymbolicName="SKILLS:SkillType" BaseType="OpcUa:ProgramStateMachineType" IsAbstract="true">
-        <Description>A skill type</Description>
 
+    <ObjectType SymbolicName="SKILLS:SkillStateType" BaseType="OpcUa:StateType" IsAbstract="false">
+        <Description>State in which a skill can be</Description>
+        <Children>
+            <Object SymbolicName="SKILLS:ContinuousParameter" TypeDefinition="OpcUa:BaseObjectType" ModellingRule="Optional">
+                <Children>
+                    <Object SymbolicName="SKILLS:InputParameter" TypeDefinition="OpcUa:BaseObjectType" ModellingRule="Optional">
+                    </Object>
+                    <Object SymbolicName="SKILLS:OutputParameter" TypeDefinition="OpcUa:BaseObjectType" ModellingRule="Optional">
+                    </Object>
+                </Children>
+            </Object>
+        </Children>
+    </ObjectType>
+
+    <ObjectType SymbolicName="SKILLS:SkillStateTransitionEventType" BaseType="OpcUa:TransitionEventType" IsAbstract="false">
+        <Description>Skill state transition</Description>
+    </ObjectType>
+
+
+    <ObjectType SymbolicName="SKILLS:SkillStateMachineType" BaseType="OpcUa:FiniteStateMachineType" IsAbstract="true"
+                SupportsEvents="true">
+        <Description>A skill state machine</Description>
+        <Children>
+
+            <!-- Methods -->
+            <Method SymbolicName="SKILLS:Start" TypeDefinition="SKILLS:SkillMethodType" ModellingRule="Mandatory"/>
+            <Method SymbolicName="SKILLS:Halt" TypeDefinition="SKILLS:SkillMethodType" ModellingRule="Mandatory"/>
+            <Method SymbolicName="SKILLS:Reset" TypeDefinition="SKILLS:SkillMethodType" ModellingRule="Mandatory"/>
+            <Method SymbolicName="SKILLS:Resume" TypeDefinition="SKILLS:SkillMethodType" ModellingRule="Mandatory"/>
+            <Method SymbolicName="SKILLS:Suspend" TypeDefinition="SKILLS:SkillMethodType" ModellingRule="Mandatory"/>
+
+            <!-- States -->
+            <Object SymbolicName="SKILLS:Running" TypeDefinition="SKILLS:SkillStateType">
+            </Object>
+            <Object SymbolicName="SKILLS:Ready" TypeDefinition="SKILLS:SkillStateType">
+            </Object>
+            <Object SymbolicName="SKILLS:Halted" TypeDefinition="SKILLS:SkillStateType">
+            </Object>
+            <Object SymbolicName="SKILLS:Suspended" TypeDefinition="SKILLS:SkillStateType">
+            </Object>
+
+            <!-- Transitions -->
+            <Object SymbolicName="SKILLS:HaltedToReady" TypeDefinition="OpcUa:TransitionType">
+                <References>
+                    <Reference IsInverse="false">
+                        <ReferenceType>OpcUa:FromState</ReferenceType>
+                        <TargetId>SKILLS:SkillStateMachineType_Halted</TargetId>
+                    </Reference>
+                    <Reference IsInverse="false">
+                        <ReferenceType>OpcUa:ToState</ReferenceType>
+                        <TargetId>SKILLS:SkillStateMachineType_Ready</TargetId>
+                    </Reference>
+                    <Reference IsInverse="false">
+                        <ReferenceType>OpcUa:HasCause</ReferenceType>
+                        <TargetId>SKILLS:SkillStateMachineType_Reset</TargetId>
+                    </Reference>
+                    <Reference IsInverse="false">
+                        <ReferenceType>OpcUa:HasEffect</ReferenceType>
+                        <TargetId>SKILLS:SkillStateTransitionEventType</TargetId>
+                    </Reference>
+                </References>
+            </Object>
+
+
+
+            <Object SymbolicName="SKILLS:ReadyToRunning" TypeDefinition="OpcUa:TransitionType">
+                <References>
+                    <Reference IsInverse="false">
+                        <ReferenceType>OpcUa:FromState</ReferenceType>
+                        <TargetId>SKILLS:SkillStateMachineType_Ready</TargetId>
+                    </Reference>
+                    <Reference IsInverse="false">
+                        <ReferenceType>OpcUa:ToState</ReferenceType>
+                        <TargetId>SKILLS:SkillStateMachineType_Running</TargetId>
+                    </Reference>
+                    <Reference IsInverse="false">
+                        <ReferenceType>OpcUa:HasCause</ReferenceType>
+                        <TargetId>SKILLS:SkillStateMachineType_Start</TargetId>
+                    </Reference>
+                    <Reference IsInverse="false">
+                        <ReferenceType>OpcUa:HasEffect</ReferenceType>
+                        <TargetId>SKILLS:SkillStateTransitionEventType</TargetId>
+                    </Reference>
+                </References>
+            </Object>
+
+
+            <Object SymbolicName="SKILLS:RunningToHalted" TypeDefinition="OpcUa:TransitionType">
+                <References>
+                    <Reference IsInverse="false">
+                        <ReferenceType>OpcUa:FromState</ReferenceType>
+                        <TargetId>SKILLS:SkillStateMachineType_Running</TargetId>
+                    </Reference>
+                    <Reference IsInverse="false">
+                        <ReferenceType>OpcUa:ToState</ReferenceType>
+                        <TargetId>SKILLS:SkillStateMachineType_Halted</TargetId>
+                    </Reference>
+                    <Reference IsInverse="false">
+                        <ReferenceType>OpcUa:HasCause</ReferenceType>
+                        <TargetId>SKILLS:SkillStateMachineType_Halt</TargetId>
+                    </Reference>
+                    <Reference IsInverse="false">
+                        <ReferenceType>OpcUa:HasEffect</ReferenceType>
+                        <TargetId>SKILLS:SkillStateTransitionEventType</TargetId>
+                    </Reference>
+                </References>
+            </Object>
+
+            <Object SymbolicName="SKILLS:RunningToReady" TypeDefinition="OpcUa:TransitionType">
+                <References>
+                    <Reference IsInverse="false">
+                        <ReferenceType>OpcUa:FromState</ReferenceType>
+                        <TargetId>SKILLS:SkillStateMachineType_Running</TargetId>
+                    </Reference>
+                    <Reference IsInverse="false">
+                        <ReferenceType>OpcUa:ToState</ReferenceType>
+                        <TargetId>SKILLS:SkillStateMachineType_Ready</TargetId>
+                    </Reference>
+                    <Reference IsInverse="false">
+                        <ReferenceType>OpcUa:HasEffect</ReferenceType>
+                        <TargetId>SKILLS:SkillStateTransitionEventType</TargetId>
+                    </Reference>
+                </References>
+            </Object>
+
+
+            <Object SymbolicName="SKILLS:RunningToSuspended" TypeDefinition="OpcUa:TransitionType">
+                <References>
+                    <Reference IsInverse="false">
+                        <ReferenceType>OpcUa:FromState</ReferenceType>
+                        <TargetId>SKILLS:SkillStateMachineType_Running</TargetId>
+                    </Reference>
+                    <Reference IsInverse="false">
+                        <ReferenceType>OpcUa:ToState</ReferenceType>
+                        <TargetId>SKILLS:SkillStateMachineType_Suspended</TargetId>
+                    </Reference>
+                    <Reference IsInverse="false">
+                        <ReferenceType>OpcUa:HasCause</ReferenceType>
+                        <TargetId>SKILLS:SkillStateMachineType_Suspend</TargetId>
+                    </Reference>
+                    <Reference IsInverse="false">
+                        <ReferenceType>OpcUa:HasEffect</ReferenceType>
+                        <TargetId>SKILLS:SkillStateTransitionEventType</TargetId>
+                    </Reference>
+                </References>
+            </Object>
+
+            <Object SymbolicName="SKILLS:SuspendedToRunning" TypeDefinition="OpcUa:TransitionType">
+                <References>
+                    <Reference IsInverse="false">
+                        <ReferenceType>OpcUa:FromState</ReferenceType>
+                        <TargetId>SKILLS:SkillStateMachineType_Suspended</TargetId>
+                    </Reference>
+                    <Reference IsInverse="false">
+                        <ReferenceType>OpcUa:ToState</ReferenceType>
+                        <TargetId>SKILLS:SkillStateMachineType_Running</TargetId>
+                    </Reference>
+                    <Reference IsInverse="false">
+                        <ReferenceType>OpcUa:HasCause</ReferenceType>
+                        <TargetId>SKILLS:SkillStateMachineType_Resume</TargetId>
+                    </Reference>
+                    <Reference IsInverse="false">
+                        <ReferenceType>OpcUa:HasEffect</ReferenceType>
+                        <TargetId>SKILLS:SkillStateTransitionEventType</TargetId>
+                    </Reference>
+                </References>
+            </Object>
+
+            <Object SymbolicName="SKILLS:SuspendedToHalted" TypeDefinition="OpcUa:TransitionType">
+                <References>
+                    <Reference IsInverse="false">
+                        <ReferenceType>OpcUa:FromState</ReferenceType>
+                        <TargetId>SKILLS:SkillStateMachineType_Suspended</TargetId>
+                    </Reference>
+                    <Reference IsInverse="false">
+                        <ReferenceType>OpcUa:ToState</ReferenceType>
+                        <TargetId>SKILLS:SkillStateMachineType_Halted</TargetId>
+                    </Reference>
+                    <Reference IsInverse="false">
+                        <ReferenceType>OpcUa:HasCause</ReferenceType>
+                        <TargetId>SKILLS:SkillStateMachineType_Halt</TargetId>
+                    </Reference>
+                    <Reference IsInverse="false">
+                        <ReferenceType>OpcUa:HasEffect</ReferenceType>
+                        <TargetId>SKILLS:SkillStateTransitionEventType</TargetId>
+                    </Reference>
+                </References>
+            </Object>
+
+            <Object SymbolicName="SKILLS:SuspendedToReady" TypeDefinition="OpcUa:TransitionType">
+                <References>
+                    <Reference IsInverse="false">
+                        <ReferenceType>OpcUa:FromState</ReferenceType>
+                        <TargetId>SKILLS:SkillStateMachineType_Suspended</TargetId>
+                    </Reference>
+                    <Reference IsInverse="false">
+                        <ReferenceType>OpcUa:ToState</ReferenceType>
+                        <TargetId>SKILLS:SkillStateMachineType_Ready</TargetId>
+                    </Reference>
+                    <Reference IsInverse="false">
+                        <ReferenceType>OpcUa:HasEffect</ReferenceType>
+                        <TargetId>SKILLS:SkillStateTransitionEventType</TargetId>
+                    </Reference>
+                </References>
+            </Object>
+
+            <Object SymbolicName="SKILLS:ReadyToHalted" TypeDefinition="OpcUa:TransitionType">
+                <References>
+                    <Reference IsInverse="false">
+                        <ReferenceType>OpcUa:FromState</ReferenceType>
+                        <TargetId>SKILLS:SkillStateMachineType_Ready</TargetId>
+                    </Reference>
+                    <Reference IsInverse="false">
+                        <ReferenceType>OpcUa:ToState</ReferenceType>
+                        <TargetId>SKILLS:SkillStateMachineType_Halted</TargetId>
+                    </Reference>
+                    <Reference IsInverse="false">
+                        <ReferenceType>OpcUa:HasCause</ReferenceType>
+                        <TargetId>SKILLS:SkillStateMachineType_Halt</TargetId>
+                    </Reference>
+                    <Reference IsInverse="false">
+                        <ReferenceType>OpcUa:HasEffect</ReferenceType>
+                        <TargetId>SKILLS:SkillStateTransitionEventType</TargetId>
+                    </Reference>
+                </References>
+            </Object>
+        </Children>
+    </ObjectType>
+
+    <!-- ### Interface Types ###-->
+
+    <ObjectType SymbolicName="SKILLS:ISkillType" BaseType="OpcUa:BaseInterfaceType"
+                IsAbstract="true"
+                SupportsEvents="true">
+        <Description>Interface every skill type has to implement</Description>
+        <Children>
+            <Property SymbolicName="SKILLS:Identifier" DataType="OpcUa:String">
+            </Property>
+            <Property SymbolicName="SKILLS:IsInstantiable" DataType="OpcUa:Boolean">
+            </Property>
+            <Object SymbolicName="SKILLS:Functionality" TypeDefinition="OpcUa:BaseObjectType" ModellingRule="Optional">
+                <Description>Object describing the skill functionality by referencing a DisctionaryEntry with reference type HasDictionaryEntryType</Description>
+            </Object>
+            <Object SymbolicName="SKILLS:StateMachine" TypeDefinition="SKILLS:SkillStateMachineType" ModellingRule="Mandatory">
+            </Object>
+        </Children>
+    </ObjectType>
+
+    <ObjectType SymbolicName="SKILLS:SkillType" BaseType="OpcUa:BaseObjectType"
+                IsAbstract="true">
     </ObjectType>
 
     <!-- ### Variable Types ###-->
