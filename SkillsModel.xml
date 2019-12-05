@@ -109,11 +109,11 @@
         <Children>
 
             <!-- Methods -->
-            <Method SymbolicName="SKILLS:Start" TypeDefinition="SKILLS:SkillMethodType" ModellingRule="Mandatory"/>
-            <Method SymbolicName="SKILLS:Halt" TypeDefinition="SKILLS:SkillMethodType" ModellingRule="Mandatory"/>
-            <Method SymbolicName="SKILLS:Reset" TypeDefinition="SKILLS:SkillMethodType" ModellingRule="Mandatory"/>
-            <Method SymbolicName="SKILLS:Resume" TypeDefinition="SKILLS:SkillMethodType" ModellingRule="Mandatory"/>
-            <Method SymbolicName="SKILLS:Suspend" TypeDefinition="SKILLS:SkillMethodType" ModellingRule="Mandatory"/>
+            <Method SymbolicName="SKILLS:Start" TypeDefinition="SKILLS:SkillMethodType" ModellingRule="Optional"/>
+            <Method SymbolicName="SKILLS:Halt" TypeDefinition="SKILLS:SkillMethodType" ModellingRule="Optional"/>
+            <Method SymbolicName="SKILLS:Reset" TypeDefinition="SKILLS:SkillMethodType" ModellingRule="Optional"/>
+            <Method SymbolicName="SKILLS:Resume" TypeDefinition="SKILLS:SkillMethodType" ModellingRule="Optional"/>
+            <Method SymbolicName="SKILLS:Suspend" TypeDefinition="SKILLS:SkillMethodType" ModellingRule="Optional"/>
 
             <!-- States -->
             <Object SymbolicName="SKILLS:Running" TypeDefinition="SKILLS:SkillStateType">
