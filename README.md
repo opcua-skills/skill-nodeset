@@ -31,6 +31,9 @@ On every push to a branch, an is executed and the resultin model files are pushe
 Have a look at the resulting files here:
 https://github.com/opcua-skills/skill-nodeset/tree/master-published/Published
 
+And for examples:
+https://github.com/opcua-skills/skill-nodeset/tree/master-examples/Examples
+
 If you like to manually build the files on your machine, follow these steps:
 
 This build process is using a pre-built docker container based on the official UA-ModelCompiler source code.
