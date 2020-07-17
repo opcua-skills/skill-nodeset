@@ -334,6 +334,12 @@
 
     <ObjectType SymbolicName="SKILLS:SkillType" BaseType="OpcUa:BaseObjectType"
                 IsAbstract="true">
+        <References>
+            <Reference IsInverse="false">
+                <ReferenceType>OpcUa:HasInterface</ReferenceType>
+                <TargetId>SKILLS:ISkillType</TargetId>
+            </Reference>
+        </References>
     </ObjectType>
 
     <!-- ### Variable Types ###-->
