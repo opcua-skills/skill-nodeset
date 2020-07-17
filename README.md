@@ -1,7 +1,5 @@
 # OPC UA Skill Model
 
-[![Build Status](https://cloud.drone.io/api/badges/Pro/opcua-device-skills/status.svg)](https://cloud.drone.io/Pro/opcua-device-skills)
-
 This repository contains the Model.xml files for the OPC UA Skill Model developed inside the SOArc VDMA Companion Specification Group.
 
 Further details on the Model.xml format can be found here:
@@ -43,7 +41,7 @@ There's currently an open pull-request (https://github.com/OPCFoundation/UA-Mode
 1. Install docker on your machine
 2. Clone this repository
 3. `cd skill-nodeset`
-4. Then run the docker container for `skillModel`:
+4. Then run the provided `build.sh` or the docker container for `skillModel`:
 	```bash
 	docker run \
 		  --mount type=bind,source=$(pwd),target=/model/src \
