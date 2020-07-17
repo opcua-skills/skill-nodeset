@@ -85,7 +85,7 @@
     </Object>
 
 
-    <Method SymbolicName="EX_LIN_AXIS_GRIP:GripperStartMethodType">
+    <Method SymbolicName="EX_LIN_AXIS_GRIP:GripStartMethodType">
         <InputArguments>
             <Argument Name="Span" DataType="OpcUa:Double"/>
             <Argument Name="Force" DataType="OpcUa:Double"/>
@@ -93,14 +93,14 @@
         <OutputArguments>
         </OutputArguments>
     </Method>
-    <ObjectType SymbolicName="EX_LIN_AXIS_GRIP:IGripperSkillType" BaseType="SKILLS:ISkillType"
+    <ObjectType SymbolicName="EX_LIN_AXIS_GRIP:IGripSkillType" BaseType="SKILLS:ISkillType"
                 IsAbstract="false"
                 SupportsEvents="true">
-        <Description>A generic gripper skill type</Description>
+        <Description>A generic grip skill type</Description>
         <Children>
             <Property SymbolicName="SKILLS:Identifier" DataType="OpcUa:String">
                 <DefaultValue>
-                    <uax:String>GripperSkill</uax:String>
+                    <uax:String>GripSkill</uax:String>
                 </DefaultValue>
             </Property>
             <Property SymbolicName="SKILLS:IsInstantiable" DataType="OpcUa:Boolean">
@@ -111,7 +111,7 @@
             <Object SymbolicName="SKILLS:StateMachine" TypeDefinition="SKILLS:SkillStateMachineType" ModellingRule="Mandatory">
                 <Children>
                     <!-- Methods -->
-                    <Method SymbolicName="SKILLS:Start" TypeDefinition="EX_LIN_AXIS_GRIP:GripperStartMethodType" ModellingRule="Mandatory"/>
+                    <Method SymbolicName="SKILLS:Start" TypeDefinition="EX_LIN_AXIS_GRIP:GripStartMethodType" ModellingRule="Mandatory"/>
 
                     <!-- States -->
                     <Object SymbolicName="SKILLS:Running" TypeDefinition="SKILLS:SkillStateType">
@@ -130,6 +130,37 @@
                             </Object>
                         </Children>
                     </Object>
+                </Children>
+            </Object>
+        </Children>
+    </ObjectType>
+
+    <Method SymbolicName="EX_LIN_AXIS_GRIP:ReleaseStartMethodType">
+        <InputArguments>
+            <Argument Name="Span" DataType="OpcUa:Double"/>
+        </InputArguments>
+        <OutputArguments>
+        </OutputArguments>
+    </Method>
+    <ObjectType SymbolicName="EX_LIN_AXIS_GRIP:IReleaseSkillType" BaseType="SKILLS:ISkillType"
+                IsAbstract="false"
+                SupportsEvents="true">
+        <Description>A generic grip skill type</Description>
+        <Children>
+            <Property SymbolicName="SKILLS:Identifier" DataType="OpcUa:String">
+                <DefaultValue>
+                    <uax:String>ReleaseSkill</uax:String>
+                </DefaultValue>
+            </Property>
+            <Property SymbolicName="SKILLS:IsInstantiable" DataType="OpcUa:Boolean">
+                <DefaultValue>
+                    <uax:Boolean>False</uax:Boolean>
+                </DefaultValue>
+            </Property>
+            <Object SymbolicName="SKILLS:StateMachine" TypeDefinition="SKILLS:SkillStateMachineType" ModellingRule="Mandatory">
+                <Children>
+                    <!-- Methods -->
+                    <Method SymbolicName="SKILLS:Start" TypeDefinition="EX_LIN_AXIS_GRIP:ReleaseStartMethodType" ModellingRule="Mandatory"/>
                 </Children>
             </Object>
         </Children>
