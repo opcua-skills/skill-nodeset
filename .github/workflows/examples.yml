@@ -33,6 +33,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
+          git add -f ${GITHUB_WORKSPACE}/Published/*
           git add -f ${GITHUB_WORKSPACE}/Examples/*
           git commit -m "[skip ci] Deploy from GitHub Action" -a
       - name: Push compiled model to examples branch
