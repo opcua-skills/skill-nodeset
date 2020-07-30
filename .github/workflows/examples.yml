@@ -10,6 +10,11 @@ jobs:
     steps:
       - name: Git checkout
         uses: actions/checkout@v1
+      - name: Compile Skill model
+        uses: docker://sailavid/ua-modelcompiler
+        with:
+          entrypoint: /bin/bash
+          args: -c "cd /app && /app/PublishModel.sh /github/workspace/SkillsModel Opc.Ua.Skills /github/workspace/Published
       - name: Compile Example.LinearAxisWithGripper
         uses: docker://sailavid/ua-modelcompiler
         with:
