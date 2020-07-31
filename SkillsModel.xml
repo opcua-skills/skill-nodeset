@@ -103,7 +103,7 @@
     </ObjectType>
 
 
-    <ObjectType SymbolicName="SKILLS:SkillStateMachineType" BaseType="OpcUa:FiniteStateMachineType" IsAbstract="true"
+    <ObjectType SymbolicName="SKILLS:SkillStateMachineType" BaseType="OpcUa:FiniteStateMachineType" IsAbstract="false"
                 SupportsEvents="true">
         <Description>A skill state machine</Description>
         <Children>

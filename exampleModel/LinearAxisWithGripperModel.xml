@@ -93,14 +93,14 @@
         <OutputArguments>
         </OutputArguments>
     </Method>
-    <ObjectType SymbolicName="EX_LIN_AXIS_GRIP:IGripSkillType" BaseType="SKILLS:ISkillType"
+    <ObjectType SymbolicName="EX_LIN_AXIS_GRIP:IGraspSkillType" BaseType="SKILLS:ISkillType"
                 IsAbstract="false"
                 SupportsEvents="true">
         <Description>A generic grip skill type</Description>
         <Children>
             <Property SymbolicName="SKILLS:Identifier" DataType="OpcUa:String">
                 <DefaultValue>
-                    <uax:String>GripSkill</uax:String>
+                    <uax:String>GraspSkill</uax:String>
                 </DefaultValue>
             </Property>
             <Property SymbolicName="SKILLS:IsInstantiable" DataType="OpcUa:Boolean">
@@ -213,11 +213,6 @@
             </Object>
         </Children>
     </ObjectType>
-
-
-    <!-- ### Variable Types ###-->
-
-    <!-- ### Data Types ###-->
 
 
 </ModelDesign>
