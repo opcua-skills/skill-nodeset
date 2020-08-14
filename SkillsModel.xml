@@ -313,12 +313,10 @@
         </Children>
     </ObjectType>
 
-    <!-- ### Interface Types ###-->
-
-    <ObjectType SymbolicName="SKILLS:ISkillType" BaseType="OpcUa:BaseInterfaceType"
+    <ObjectType SymbolicName="SKILLS:SkillType" BaseType="OpcUa:BaseObjectType"
                 IsAbstract="true"
                 SupportsEvents="true">
-        <Description>Interface every skill type has to implement</Description>
+        <Description>Base Type of every skill</Description>
         <Children>
             <Property SymbolicName="SKILLS:Identifier" DataType="OpcUa:String">
             </Property>
@@ -332,19 +330,10 @@
         </Children>
     </ObjectType>
 
-    <ObjectType SymbolicName="SKILLS:SkillType" BaseType="OpcUa:BaseObjectType"
-                IsAbstract="true">
-        <References>
-            <Reference IsInverse="false">
-                <ReferenceType>OpcUa:HasInterface</ReferenceType>
-                <TargetId>SKILLS:ISkillType</TargetId>
-            </Reference>
-        </References>
-    </ObjectType>
 
-    <!-- ### Variable Types ###-->
-
-    <!-- ### Data Types ###-->
+    <ReferenceType SymbolicName="SKILLS:UsesSkill" BaseType="OpcUa:NonHierarchicalReferences" Symmetric="false">
+        <Description>Indicates that a component or skill implementation uses the referenced skill</Description>
+    </ReferenceType>
 
 
 </ModelDesign>

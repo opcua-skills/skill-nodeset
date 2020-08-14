@@ -72,9 +72,9 @@
                     <uax:String></uax:String>
                 </DefaultValue>
             </Property>
-            <Property SymbolicName="OpcUa:DefaultRolePermissions" ModellingRule="Mandatory" />
-            <Property SymbolicName="OpcUa:DefaultUserRolePermissions" ModellingRule="Mandatory" />
-            <Property SymbolicName="OpcUa:DefaultAccessRestrictions" ModellingRule="Mandatory" />
+            <Property SymbolicName="OpcUa:DefaultRolePermissions" ModellingRule="Mandatory"/>
+            <Property SymbolicName="OpcUa:DefaultUserRolePermissions" ModellingRule="Mandatory"/>
+            <Property SymbolicName="OpcUa:DefaultAccessRestrictions" ModellingRule="Mandatory"/>
         </Children>
         <References>
             <Reference IsInverse="true">
@@ -93,7 +93,7 @@
         <OutputArguments>
         </OutputArguments>
     </Method>
-    <ObjectType SymbolicName="EX_LIN_AXIS_GRIP:IGraspSkillType" BaseType="SKILLS:ISkillType"
+    <ObjectType SymbolicName="EX_LIN_AXIS_GRIP:GraspSkillType" BaseType="SKILLS:SkillType"
                 IsAbstract="false"
                 SupportsEvents="true">
         <Description>A generic grip skill type</Description>
@@ -120,7 +120,8 @@
                                 <Children>
                                     <Object SymbolicName="SKILLS:OutputParameter" TypeDefinition="OpcUa:BaseObjectType" ModellingRule="Mandatory">
                                         <Children>
-                                            <Variable SymbolicName="EX_LIN_AXIS_GRIP:CurrentForce" TypeDefinition="OpcUa:BaseDataVariableType" DataType="OpcUa:Double"
+                                            <Variable SymbolicName="EX_LIN_AXIS_GRIP:CurrentForce" TypeDefinition="OpcUa:BaseDataVariableType"
+                                                      DataType="OpcUa:Double"
                                                       ModellingRule="Mandatory" ValueRank="Scalar" AccessLevel="Read">
                                                 <Description>Current force acting on the gripper fingers</Description>
                                             </Variable>
@@ -142,7 +143,7 @@
         <OutputArguments>
         </OutputArguments>
     </Method>
-    <ObjectType SymbolicName="EX_LIN_AXIS_GRIP:IReleaseSkillType" BaseType="SKILLS:ISkillType"
+    <ObjectType SymbolicName="EX_LIN_AXIS_GRIP:ReleaseSkillType" BaseType="SKILLS:SkillType"
                 IsAbstract="false"
                 SupportsEvents="true">
         <Description>A generic grip skill type</Description>
@@ -172,14 +173,14 @@
             <Argument Name="Position" DataType="OpcUa:Double"/>
         </InputArguments>
     </Method>
-    <ObjectType SymbolicName="EX_LIN_AXIS_GRIP:IMoveToAbsSkillType" BaseType="SKILLS:ISkillType"
+    <ObjectType SymbolicName="EX_LIN_AXIS_GRIP:MoveToAbsPosSkillType" BaseType="SKILLS:SkillType"
                 IsAbstract="false"
                 SupportsEvents="true">
         <Description>Skill type for a linear axis move to absolute position</Description>
         <Children>
             <Property SymbolicName="SKILLS:Identifier" DataType="OpcUa:String">
                 <DefaultValue>
-                    <uax:String>MoveToAbsSkill</uax:String>
+                    <uax:String>MoveToAbsPosSkill</uax:String>
                 </DefaultValue>
             </Property>
             <Property SymbolicName="SKILLS:IsInstantiable" DataType="OpcUa:Boolean">
@@ -199,7 +200,8 @@
                                 <Children>
                                     <Object SymbolicName="SKILLS:OutputParameter" TypeDefinition="OpcUa:BaseObjectType" ModellingRule="Mandatory">
                                         <Children>
-                                            <Variable SymbolicName="EX_LIN_AXIS_GRIP:CurrentPosition" TypeDefinition="OpcUa:BaseDataVariableType" DataType="OpcUa:Double"
+                                            <Variable SymbolicName="EX_LIN_AXIS_GRIP:CurrentPosition" TypeDefinition="OpcUa:BaseDataVariableType"
+                                                      DataType="OpcUa:Double"
                                                       ModellingRule="Mandatory" ValueRank="Scalar" AccessLevel="Read">
                                                 <Description>Current position of the linear axis</Description>
                                             </Variable>
@@ -214,5 +216,70 @@
         </Children>
     </ObjectType>
 
+
+    <Method SymbolicName="EX_LIN_AXIS_GRIP:PickMethodType">
+        <InputArguments>
+            <Argument Name="Position" DataType="OpcUa:Double"/>
+            <Argument Name="Span" DataType="OpcUa:Double"/>
+        </InputArguments>
+    </Method>
+    <ObjectType SymbolicName="EX_LIN_AXIS_GRIP:PickSkillType" BaseType="SKILLS:SkillType"
+                IsAbstract="false"
+                SupportsEvents="true">
+        <Description>Skill type for a linear axis move to absolute position and grasp an object. Uses the MoveToAbsPos and Grasp Skill</Description>
+        <Children>
+            <Property SymbolicName="SKILLS:Identifier" DataType="OpcUa:String">
+                <DefaultValue>
+                    <uax:String>PickSkillType</uax:String>
+                </DefaultValue>
+            </Property>
+            <Property SymbolicName="SKILLS:IsInstantiable" DataType="OpcUa:Boolean">
+                <DefaultValue>
+                    <uax:Boolean>False</uax:Boolean>
+                </DefaultValue>
+            </Property>
+            <Object SymbolicName="SKILLS:StateMachine" TypeDefinition="SKILLS:SkillStateMachineType" ModellingRule="Mandatory">
+                <Children>
+                    <!-- Methods -->
+                    <Method SymbolicName="SKILLS:Start" TypeDefinition="EX_LIN_AXIS_GRIP:MoveToAbsStartMethodType" ModellingRule="Mandatory"/>
+                </Children>
+            </Object>
+        </Children>
+    </ObjectType>
+
+    <ObjectType SymbolicName="EX_LIN_AXIS_GRIP:LinAxisWithGripperType" BaseType="DI:DeviceType" IsAbstract="false">
+    </ObjectType>
+
+    <!-- Sommer automatic gripper Device -->
+    <Object SymbolicName="EX_LIN_AXIS_GRIP:LinAxisWithGripper" TypeDefinition="EX_LIN_AXIS_GRIP:LinAxisWithGripperType" SupportsEvents="true">
+        <Description>Linear Axis with gripper</Description>
+        <Children>
+            <Object SymbolicName="SKILLS:Skills" TypeDefinition="OpcUa:BaseObjectType" ModellingRule="Mandatory">
+                <Description>Contains the skills of the gripper controller.</Description>
+                <Children>
+                    <!--Object SymbolicName="DEVICE:MoveGripperSkill" TypeDefinition="DEVICE:MoveGripperSkillType" ModellingRule="Optional" /-->
+                    <Object SymbolicName="EX_LIN_AXIS_GRIP:ReleaseSkill" TypeDefinition="EX_LIN_AXIS_GRIP:ReleaseSkillType" ModellingRule="Mandatory"
+                            SupportsEvents="true"/>
+                    <Object SymbolicName="EX_LIN_AXIS_GRIP:GraspSkill" TypeDefinition="EX_LIN_AXIS_GRIP:GraspSkillType" ModellingRule="Mandatory"
+                            SupportsEvents="true"/>
+                    <Object SymbolicName="EX_LIN_AXIS_GRIP:MoveToAbsPosSkill" TypeDefinition="EX_LIN_AXIS_GRIP:MoveToAbsPosSkillType" ModellingRule="Mandatory"
+                            SupportsEvents="true"/>
+                    <Object SymbolicName="EX_LIN_AXIS_GRIP:PickSkill" TypeDefinition="EX_LIN_AXIS_GRIP:PickSkillType" ModellingRule="Mandatory"
+                            SupportsEvents="true">
+                        <References>
+                            <Reference>
+                                <ReferenceType>SKILLS:UsesSkill</ReferenceType>
+                                <TargetId>EX_LIN_AXIS_GRIP:LinAxisWithGripper_Skills_GraspSkill</TargetId>
+                            </Reference>
+                            <Reference>
+                                <ReferenceType>SKILLS:UsesSkill</ReferenceType>
+                                <TargetId>EX_LIN_AXIS_GRIP:LinAxisWithGripper_Skills_MoveToAbsPosSkill</TargetId>
+                            </Reference>
+                        </References>
+                    </Object>
+                </Children>
+            </Object>
+        </Children>
+    </Object>
 
 </ModelDesign>
