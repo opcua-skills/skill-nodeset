@@ -250,7 +250,6 @@
     <ObjectType SymbolicName="EX_LIN_AXIS_GRIP:LinAxisWithGripperType" BaseType="DI:DeviceType" IsAbstract="false">
     </ObjectType>
 
-    <!-- Sommer automatic gripper Device -->
     <Object SymbolicName="EX_LIN_AXIS_GRIP:LinAxisWithGripper" TypeDefinition="EX_LIN_AXIS_GRIP:LinAxisWithGripperType" SupportsEvents="true">
         <Description>Linear Axis with gripper</Description>
         <Children>
@@ -280,6 +279,12 @@
                 </Children>
             </Object>
         </Children>
+        <References>
+            <Reference IsInverse="true">
+                <ReferenceType>OpcUa:Organizes</ReferenceType>
+                <TargetId>DI:DeviceSet</TargetId>
+            </Reference>
+        </References>
     </Object>
 
 </ModelDesign>
