@@ -24,7 +24,7 @@ This repository is a first draft of a possible skill model, which acts as a basi
 
 The `master` branch only contains the `*Model.xml` files, not the compiled NodeSet2.xml files.
 
-On every push to a branch, an is executed and the resultin model files are pushed back to the branch 'master-published'.
+On every push to a branch, an is executed and the resulting model files are pushed back to the branch 'master-published'.
 
 Have a look at the resulting files here:
 https://github.com/opcua-skills/skill-nodeset/tree/master-published/Published
