@@ -1,0 +1,49 @@
+name: Publish
+
+on: [push, pull_request]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@v1
+      - name: Extract branch name
+        shell: bash
+        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+        id: extract_branch
+      - name: Compile Skill model
+        uses: docker://sailavid/ua-modelcompiler
+        with:
+          entrypoint: /bin/bash
+          args: -c "cd /app && /app/PublishModel.sh /github/workspace/SkillsModel Opc.Ua.Skills /github/workspace/Published/Skills
+      - name: Compile Example.LinearAxisWithGripper
+        uses: docker://sailavid/ua-modelcompiler
+        with:
+          entrypoint: /bin/bash
+          args: -c "cd /app && /app/PublishModel.sh /github/workspace/exampleModel/LinearAxisWithGripperModel Example.LinearAxisWithGripper /github/workspace/Published/LinearAxisWithGripper"
+      - name: Upload compiled model
+        uses: actions/upload-artifact@v1
+        with:
+          name: Published
+          path: Published
+      - name: Commit files
+        if: steps.extract_branch.outputs.branch == 'master'
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          mv Published Published-new
+          git checkout ${{ steps.extract_branch.outputs.branch }}-published
+          git merge -X theirs -m"Merge changes from ${{ steps.extract_branch.outputs.branch }}" ${{ steps.extract_branch.outputs.branch }}
+          rm -rf Published
+          mv Published-new Published
+          git add -f ${GITHUB_WORKSPACE}/Published/*
+          git commit -m "[skip ci] Deploy from GitHub Action" -a
+      - name: Push compiled model to published branch
+        if: steps.extract_branch.outputs.branch == 'master'
+        uses: ad-m/github-push-action@master
+        with:
+          branch: ${{ steps.extract_branch.outputs.branch }}-published
+          github_token: ${{ secrets.GITHUB_TOKEN }}
