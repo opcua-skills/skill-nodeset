@@ -1,0 +1,14 @@
+<xs:schema
+  xmlns:Skills="http://opcfoundation.org/UA/Skills/Types.xsd"
+  xmlns:DI="http://opcfoundation.org/UA/DI/Types.xsd"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:ua="http://opcfoundation.org/UA/2008/02/Types.xsd"
+  xmlns:tns="https://example.com/UA/Examples/LinearAxisWithGripper/Types.xsd"
+  targetNamespace="https://example.com/UA/Examples/LinearAxisWithGripper/Types.xsd"
+  elementFormDefault="qualified"
+>
+  <xs:import namespace="http://opcfoundation.org/UA/2008/02/Types.xsd" />
+  <xs:import namespace="http://opcfoundation.org/UA/Skills/Types.xsd" />
+  <xs:import namespace="http://opcfoundation.org/UA/DI/Types.xsd" />
+
+</xs:schema>

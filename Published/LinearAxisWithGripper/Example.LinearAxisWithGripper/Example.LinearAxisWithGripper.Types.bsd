@@ -1,0 +1,15 @@
+<opc:TypeDictionary
+  xmlns:Skills="http://opcfoundation.org/UA/Skills/"
+  xmlns:DI="http://opcfoundation.org/UA/DI/"
+  xmlns:opc="http://opcfoundation.org/BinarySchema/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:ua="http://opcfoundation.org/UA/"
+  xmlns:tns="https://example.com/UA/Examples/LinearAxisWithGripper/"
+  DefaultByteOrder="LittleEndian"
+  TargetNamespace="https://example.com/UA/Examples/LinearAxisWithGripper/"
+>
+  <opc:Import Namespace="http://opcfoundation.org/UA/" Location="Opc.Ua.BinarySchema.bsd"/>
+  <opc:Import Namespace="http://opcfoundation.org/UA/Skills/" Location="Opc.Ua.Skills.BinarySchema.bsd"/>
+  <opc:Import Namespace="http://opcfoundation.org/UA/DI/" Location="Opc.Ua.Di.BinarySchema.bsd"/>
+
+</opc:TypeDictionary>
