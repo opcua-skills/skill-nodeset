@@ -8,8 +8,8 @@
         xmlns:xsd="http://www.w3.org/2001/XMLSchema"
         TargetNamespace="http://opcfoundation.org/UA/Skills/"
         TargetXmlNamespace="http://opcfoundation.org/UA/Skills/"
-        TargetVersion="0.0.1"
-        TargetPublicationDate="2018-03-23T00:00:00Z"
+        TargetVersion="0.0.5"
+        TargetPublicationDate="2020-08-01T00:00:00Z"
         xmlns="http://opcfoundation.org/UA/ModelDesign.xsd">
 
     <Namespaces>

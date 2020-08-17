@@ -10,8 +10,8 @@
         xmlns:xsd="http://www.w3.org/2001/XMLSchema"
         TargetNamespace="https://example.com/UA/Examples/LinearAxisWithGripper/"
         TargetXmlNamespace="https://example.com/UA/Examples/LinearAxisWithGripper/"
-        TargetVersion="0.9.1"
-        TargetPublicationDate="2018-06-24T00:00:00Z"
+        TargetVersion="0.9.2"
+        TargetPublicationDate="2020-08-01T00:00:00Z"
         xmlns="http://opcfoundation.org/UA/ModelDesign.xsd">
 
     <Namespaces>
