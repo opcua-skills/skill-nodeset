@@ -34,9 +34,10 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
+          git checkout -b ${{ steps.extract_branch.outputs.branch }}-tmp
           mv Published Published-new
           git checkout ${{ steps.extract_branch.outputs.branch }}-published
-          git merge -X theirs -m"Merge changes from ${{ steps.extract_branch.outputs.branch }}" ${{ steps.extract_branch.outputs.branch }}
+          git merge -X theirs -m"Merge changes from ${{ steps.extract_branch.outputs.branch }}" ${{ steps.extract_branch.outputs.branch }}-tmp
           rm -rf Published
           mv Published-new Published
           git add -f ${GITHUB_WORKSPACE}/Published/*
