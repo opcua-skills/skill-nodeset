@@ -1610,6 +1610,7 @@
       <Reference ReferenceType="HasProperty">ns=1;i=15430</Reference>
       <Reference ReferenceType="HasProperty">ns=1;i=15432</Reference>
       <Reference ReferenceType="HasComponent">ns=1;i=15468</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=3;i=5001</Reference>
       <Reference ReferenceType="HasTypeDefinition">ns=1;i=15328</Reference>
     </References>
   </UAObject>
