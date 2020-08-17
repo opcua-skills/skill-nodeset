@@ -27,10 +27,7 @@ The `master` branch only contains the `*Model.xml` files, not the compiled NodeS
 On every push to a branch, an is executed and the resultin model files are pushed back to the branch 'master-published'.
 
 Have a look at the resulting files here:
-https://github.com/opcua-skills/skill-nodeset/tree/master-published/Published
-
-And for examples:
-https://github.com/opcua-skills/skill-nodeset/tree/master-examples/Examples
+https://github.com/opcua-skills/skill-nodeset/tree/master-examples/Published
 
 If you like to manually build the files on your machine, follow these steps:
 
@@ -47,7 +44,7 @@ There's currently an open pull-request (https://github.com/OPCFoundation/UA-Mode
 		  --mount type=bind,source=$(pwd),target=/model/src \
 		  --entrypoint "/app/PublishModel.sh" \
 		  sailavid/ua-modelcompiler \
-		   /model/src/SkillsModel Opc.Ua.Skills /model/src/Published
+		   /model/src/SkillsModel Opc.Ua.Skills /model/src/Published/Skills
 	```
 5. To build an example, run the following:
 	```bash
@@ -55,7 +52,7 @@ There's currently an open pull-request (https://github.com/OPCFoundation/UA-Mode
 		  --mount type=bind,source=$(pwd),target=/model/src \
 		  --entrypoint "/app/PublishModel.sh" \
 		  sailavid/ua-modelcompiler \
-		   /model/src/exampleModel/LinearAxisWithGripperModel Example.LinearAxisWithGripper /model/src/Examples
+		   /model/src/exampleModel/LinearAxisWithGripperModel Example.LinearAxisWithGripper /model/src/Published/LinearAxisWithGripper
 	```
 
 This will create all the compiled NodeSet2.xml files inside the `Published` folder.

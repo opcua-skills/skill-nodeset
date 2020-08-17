@@ -137,10 +137,6 @@
                         <TargetId>SKILLS:SkillStateMachineType_Ready</TargetId>
                     </Reference>
                     <Reference IsInverse="false">
-                        <ReferenceType>OpcUa:HasCause</ReferenceType>
-                        <TargetId>SKILLS:SkillStateMachineType_Reset</TargetId>
-                    </Reference>
-                    <Reference IsInverse="false">
                         <ReferenceType>OpcUa:HasEffect</ReferenceType>
                         <TargetId>SKILLS:SkillStateTransitionEventType</TargetId>
                     </Reference>
@@ -160,10 +156,6 @@
                         <TargetId>SKILLS:SkillStateMachineType_Running</TargetId>
                     </Reference>
                     <Reference IsInverse="false">
-                        <ReferenceType>OpcUa:HasCause</ReferenceType>
-                        <TargetId>SKILLS:SkillStateMachineType_Start</TargetId>
-                    </Reference>
-                    <Reference IsInverse="false">
                         <ReferenceType>OpcUa:HasEffect</ReferenceType>
                         <TargetId>SKILLS:SkillStateTransitionEventType</TargetId>
                     </Reference>
@@ -180,10 +172,6 @@
                     <Reference IsInverse="false">
                         <ReferenceType>OpcUa:ToState</ReferenceType>
                         <TargetId>SKILLS:SkillStateMachineType_Halted</TargetId>
-                    </Reference>
-                    <Reference IsInverse="false">
-                        <ReferenceType>OpcUa:HasCause</ReferenceType>
-                        <TargetId>SKILLS:SkillStateMachineType_Halt</TargetId>
                     </Reference>
                     <Reference IsInverse="false">
                         <ReferenceType>OpcUa:HasEffect</ReferenceType>
@@ -221,10 +209,6 @@
                         <TargetId>SKILLS:SkillStateMachineType_Suspended</TargetId>
                     </Reference>
                     <Reference IsInverse="false">
-                        <ReferenceType>OpcUa:HasCause</ReferenceType>
-                        <TargetId>SKILLS:SkillStateMachineType_Suspend</TargetId>
-                    </Reference>
-                    <Reference IsInverse="false">
                         <ReferenceType>OpcUa:HasEffect</ReferenceType>
                         <TargetId>SKILLS:SkillStateTransitionEventType</TargetId>
                     </Reference>
@@ -242,10 +226,6 @@
                         <TargetId>SKILLS:SkillStateMachineType_Running</TargetId>
                     </Reference>
                     <Reference IsInverse="false">
-                        <ReferenceType>OpcUa:HasCause</ReferenceType>
-                        <TargetId>SKILLS:SkillStateMachineType_Resume</TargetId>
-                    </Reference>
-                    <Reference IsInverse="false">
                         <ReferenceType>OpcUa:HasEffect</ReferenceType>
                         <TargetId>SKILLS:SkillStateTransitionEventType</TargetId>
                     </Reference>
@@ -261,10 +241,6 @@
                     <Reference IsInverse="false">
                         <ReferenceType>OpcUa:ToState</ReferenceType>
                         <TargetId>SKILLS:SkillStateMachineType_Halted</TargetId>
-                    </Reference>
-                    <Reference IsInverse="false">
-                        <ReferenceType>OpcUa:HasCause</ReferenceType>
-                        <TargetId>SKILLS:SkillStateMachineType_Halt</TargetId>
                     </Reference>
                     <Reference IsInverse="false">
                         <ReferenceType>OpcUa:HasEffect</ReferenceType>
@@ -299,10 +275,6 @@
                     <Reference IsInverse="false">
                         <ReferenceType>OpcUa:ToState</ReferenceType>
                         <TargetId>SKILLS:SkillStateMachineType_Halted</TargetId>
-                    </Reference>
-                    <Reference IsInverse="false">
-                        <ReferenceType>OpcUa:HasCause</ReferenceType>
-                        <TargetId>SKILLS:SkillStateMachineType_Halt</TargetId>
                     </Reference>
                     <Reference IsInverse="false">
                         <ReferenceType>OpcUa:HasEffect</ReferenceType>

@@ -4,8 +4,8 @@
         xmlns:uax="http://opcfoundation.org/UA/2008/02/Types.xsd"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xmlns:OpcUa="http://opcfoundation.org/UA/"
-        xmlns:DI="http://opcfoundation.org/UA/DI/"
         xmlns:SKILLS="http://opcfoundation.org/UA/Skills/"
+        xmlns:DI="http://opcfoundation.org/UA/DI/"
         xmlns:EX_LIN_AXIS_GRIP="https://example.com/UA/Examples/LinearAxisWithGripper/"
         xmlns:xsd="http://www.w3.org/2001/XMLSchema"
         TargetNamespace="https://example.com/UA/Examples/LinearAxisWithGripper/"
@@ -22,11 +22,11 @@
         <Namespace Name="OpcUa" Version="1.03" PublicationDate="2013-12-02T00:00:00Z" Prefix="Opc.Ua"
                    InternalPrefix="Opc.Ua.Server" XmlNamespace="http://opcfoundation.org/UA/2008/02/Types.xsd"
                    XmlPrefix="OpcUa">http://opcfoundation.org/UA/</Namespace>
-        <Namespace Name="OpcUaDi" Prefix="Opc.Ua.Di" XmlNamespace="http://opcfoundation.org/UA/DI/Types.xsd"
-                   XmlPrefix="DI" FilePath="OpcUaDiModel">http://opcfoundation.org/UA/DI/</Namespace>
         <Namespace Name="OpcUaSkills" Prefix="Opc.Ua.Skills"
                    XmlNamespace="http://opcfoundation.org/UA/Skills/Types.xsd" XmlPrefix="Skills"
                    FilePath="../SkillsModel">http://opcfoundation.org/UA/Skills/</Namespace>
+        <Namespace Name="OpcUaDi" Prefix="Opc.Ua.Di" XmlNamespace="http://opcfoundation.org/UA/DI/Types.xsd"
+                   XmlPrefix="DI" FilePath="OpcUaDiModel">http://opcfoundation.org/UA/DI/</Namespace>
     </Namespaces>
 
 
