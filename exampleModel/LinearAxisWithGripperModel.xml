@@ -194,9 +194,9 @@
                     <Method SymbolicName="SKILLS:Start" TypeDefinition="EX_LIN_AXIS_GRIP:MoveToAbsStartMethodType" ModellingRule="Mandatory"/>
 
                     <!-- States -->
-                    <Object SymbolicName="SKILLS:Running" TypeDefinition="SKILLS:SkillStateType">
+                    <Object SymbolicName="SKILLS:Running" TypeDefinition="SKILLS:SkillStateType" ModellingRule="Mandatory">
                         <Children>
-                            <Object SymbolicName="SKILLS:ContinuousParameter" TypeDefinition="OpcUa:BaseObjectType">
+                            <Object SymbolicName="SKILLS:ContinuousParameter" TypeDefinition="OpcUa:BaseObjectType" ModellingRule="Mandatory">
                                 <Children>
                                     <Object SymbolicName="SKILLS:OutputParameter" TypeDefinition="OpcUa:BaseObjectType" ModellingRule="Mandatory">
                                         <Children>
@@ -241,7 +241,7 @@
             <Object SymbolicName="SKILLS:StateMachine" TypeDefinition="SKILLS:SkillStateMachineType" ModellingRule="Mandatory">
                 <Children>
                     <!-- Methods -->
-                    <Method SymbolicName="SKILLS:Start" TypeDefinition="EX_LIN_AXIS_GRIP:MoveToAbsStartMethodType" ModellingRule="Mandatory"/>
+                    <Method SymbolicName="SKILLS:Start" TypeDefinition="EX_LIN_AXIS_GRIP:PickMethodType" ModellingRule="Mandatory"/>
                 </Children>
             </Object>
         </Children>
