@@ -83,9 +83,49 @@ namespace Example.LinearAxisWithGripper
         public const uint GraspSkillType_StateMachine_Start = 15054;
 
         /// <summary>
+        /// The identifier for the GraspSkillType_StateMachine_Halt Method.
+        /// </summary>
+        public const uint GraspSkillType_StateMachine_Halt = 15057;
+
+        /// <summary>
+        /// The identifier for the GraspSkillType_StateMachine_Reset Method.
+        /// </summary>
+        public const uint GraspSkillType_StateMachine_Reset = 15060;
+
+        /// <summary>
+        /// The identifier for the GraspSkillType_StateMachine_Resume Method.
+        /// </summary>
+        public const uint GraspSkillType_StateMachine_Resume = 15063;
+
+        /// <summary>
+        /// The identifier for the GraspSkillType_StateMachine_Suspend Method.
+        /// </summary>
+        public const uint GraspSkillType_StateMachine_Suspend = 15066;
+
+        /// <summary>
         /// The identifier for the ReleaseSkillType_StateMachine_Start Method.
         /// </summary>
         public const uint ReleaseSkillType_StateMachine_Start = 15128;
+
+        /// <summary>
+        /// The identifier for the ReleaseSkillType_StateMachine_Halt Method.
+        /// </summary>
+        public const uint ReleaseSkillType_StateMachine_Halt = 15131;
+
+        /// <summary>
+        /// The identifier for the ReleaseSkillType_StateMachine_Reset Method.
+        /// </summary>
+        public const uint ReleaseSkillType_StateMachine_Reset = 15134;
+
+        /// <summary>
+        /// The identifier for the ReleaseSkillType_StateMachine_Resume Method.
+        /// </summary>
+        public const uint ReleaseSkillType_StateMachine_Resume = 15137;
+
+        /// <summary>
+        /// The identifier for the ReleaseSkillType_StateMachine_Suspend Method.
+        /// </summary>
+        public const uint ReleaseSkillType_StateMachine_Suspend = 15140;
 
         /// <summary>
         /// The identifier for the MoveToAbsPosSkillType_StateMachine_Start Method.
@@ -93,9 +133,49 @@ namespace Example.LinearAxisWithGripper
         public const uint MoveToAbsPosSkillType_StateMachine_Start = 15201;
 
         /// <summary>
+        /// The identifier for the MoveToAbsPosSkillType_StateMachine_Halt Method.
+        /// </summary>
+        public const uint MoveToAbsPosSkillType_StateMachine_Halt = 15204;
+
+        /// <summary>
+        /// The identifier for the MoveToAbsPosSkillType_StateMachine_Reset Method.
+        /// </summary>
+        public const uint MoveToAbsPosSkillType_StateMachine_Reset = 15207;
+
+        /// <summary>
+        /// The identifier for the MoveToAbsPosSkillType_StateMachine_Resume Method.
+        /// </summary>
+        public const uint MoveToAbsPosSkillType_StateMachine_Resume = 15210;
+
+        /// <summary>
+        /// The identifier for the MoveToAbsPosSkillType_StateMachine_Suspend Method.
+        /// </summary>
+        public const uint MoveToAbsPosSkillType_StateMachine_Suspend = 15213;
+
+        /// <summary>
         /// The identifier for the PickSkillType_StateMachine_Start Method.
         /// </summary>
         public const uint PickSkillType_StateMachine_Start = 15275;
+
+        /// <summary>
+        /// The identifier for the PickSkillType_StateMachine_Halt Method.
+        /// </summary>
+        public const uint PickSkillType_StateMachine_Halt = 15278;
+
+        /// <summary>
+        /// The identifier for the PickSkillType_StateMachine_Reset Method.
+        /// </summary>
+        public const uint PickSkillType_StateMachine_Reset = 15281;
+
+        /// <summary>
+        /// The identifier for the PickSkillType_StateMachine_Resume Method.
+        /// </summary>
+        public const uint PickSkillType_StateMachine_Resume = 15284;
+
+        /// <summary>
+        /// The identifier for the PickSkillType_StateMachine_Suspend Method.
+        /// </summary>
+        public const uint PickSkillType_StateMachine_Suspend = 15287;
 
         /// <summary>
         /// The identifier for the LinAxisWithGripperType_Lock_InitLock Method.
@@ -183,9 +263,49 @@ namespace Example.LinearAxisWithGripper
         public const uint LinAxisWithGripper_Skills_ReleaseSkill_StateMachine_Start = 15487;
 
         /// <summary>
+        /// The identifier for the LinAxisWithGripper_Skills_ReleaseSkill_StateMachine_Halt Method.
+        /// </summary>
+        public const uint LinAxisWithGripper_Skills_ReleaseSkill_StateMachine_Halt = 15490;
+
+        /// <summary>
+        /// The identifier for the LinAxisWithGripper_Skills_ReleaseSkill_StateMachine_Reset Method.
+        /// </summary>
+        public const uint LinAxisWithGripper_Skills_ReleaseSkill_StateMachine_Reset = 15493;
+
+        /// <summary>
+        /// The identifier for the LinAxisWithGripper_Skills_ReleaseSkill_StateMachine_Resume Method.
+        /// </summary>
+        public const uint LinAxisWithGripper_Skills_ReleaseSkill_StateMachine_Resume = 15496;
+
+        /// <summary>
+        /// The identifier for the LinAxisWithGripper_Skills_ReleaseSkill_StateMachine_Suspend Method.
+        /// </summary>
+        public const uint LinAxisWithGripper_Skills_ReleaseSkill_StateMachine_Suspend = 15499;
+
+        /// <summary>
         /// The identifier for the LinAxisWithGripper_Skills_GraspSkill_StateMachine_Start Method.
         /// </summary>
         public const uint LinAxisWithGripper_Skills_GraspSkill_StateMachine_Start = 15558;
+
+        /// <summary>
+        /// The identifier for the LinAxisWithGripper_Skills_GraspSkill_StateMachine_Halt Method.
+        /// </summary>
+        public const uint LinAxisWithGripper_Skills_GraspSkill_StateMachine_Halt = 15561;
+
+        /// <summary>
+        /// The identifier for the LinAxisWithGripper_Skills_GraspSkill_StateMachine_Reset Method.
+        /// </summary>
+        public const uint LinAxisWithGripper_Skills_GraspSkill_StateMachine_Reset = 15564;
+
+        /// <summary>
+        /// The identifier for the LinAxisWithGripper_Skills_GraspSkill_StateMachine_Resume Method.
+        /// </summary>
+        public const uint LinAxisWithGripper_Skills_GraspSkill_StateMachine_Resume = 15567;
+
+        /// <summary>
+        /// The identifier for the LinAxisWithGripper_Skills_GraspSkill_StateMachine_Suspend Method.
+        /// </summary>
+        public const uint LinAxisWithGripper_Skills_GraspSkill_StateMachine_Suspend = 15570;
 
         /// <summary>
         /// The identifier for the LinAxisWithGripper_Skills_MoveToAbsPosSkill_StateMachine_Start Method.
@@ -193,9 +313,49 @@ namespace Example.LinearAxisWithGripper
         public const uint LinAxisWithGripper_Skills_MoveToAbsPosSkill_StateMachine_Start = 15630;
 
         /// <summary>
+        /// The identifier for the LinAxisWithGripper_Skills_MoveToAbsPosSkill_StateMachine_Halt Method.
+        /// </summary>
+        public const uint LinAxisWithGripper_Skills_MoveToAbsPosSkill_StateMachine_Halt = 15633;
+
+        /// <summary>
+        /// The identifier for the LinAxisWithGripper_Skills_MoveToAbsPosSkill_StateMachine_Reset Method.
+        /// </summary>
+        public const uint LinAxisWithGripper_Skills_MoveToAbsPosSkill_StateMachine_Reset = 15636;
+
+        /// <summary>
+        /// The identifier for the LinAxisWithGripper_Skills_MoveToAbsPosSkill_StateMachine_Resume Method.
+        /// </summary>
+        public const uint LinAxisWithGripper_Skills_MoveToAbsPosSkill_StateMachine_Resume = 15639;
+
+        /// <summary>
+        /// The identifier for the LinAxisWithGripper_Skills_MoveToAbsPosSkill_StateMachine_Suspend Method.
+        /// </summary>
+        public const uint LinAxisWithGripper_Skills_MoveToAbsPosSkill_StateMachine_Suspend = 15642;
+
+        /// <summary>
         /// The identifier for the LinAxisWithGripper_Skills_PickSkill_StateMachine_Start Method.
         /// </summary>
         public const uint LinAxisWithGripper_Skills_PickSkill_StateMachine_Start = 15702;
+
+        /// <summary>
+        /// The identifier for the LinAxisWithGripper_Skills_PickSkill_StateMachine_Halt Method.
+        /// </summary>
+        public const uint LinAxisWithGripper_Skills_PickSkill_StateMachine_Halt = 15705;
+
+        /// <summary>
+        /// The identifier for the LinAxisWithGripper_Skills_PickSkill_StateMachine_Reset Method.
+        /// </summary>
+        public const uint LinAxisWithGripper_Skills_PickSkill_StateMachine_Reset = 15708;
+
+        /// <summary>
+        /// The identifier for the LinAxisWithGripper_Skills_PickSkill_StateMachine_Resume Method.
+        /// </summary>
+        public const uint LinAxisWithGripper_Skills_PickSkill_StateMachine_Resume = 15711;
+
+        /// <summary>
+        /// The identifier for the LinAxisWithGripper_Skills_PickSkill_StateMachine_Suspend Method.
+        /// </summary>
+        public const uint LinAxisWithGripper_Skills_PickSkill_StateMachine_Suspend = 15714;
     }
     #endregion
 
@@ -703,6 +863,11 @@ namespace Example.LinearAxisWithGripper
         public const uint LinAxisWithGripper_Skills_MoveToAbsPosSkill_StateMachine_Running = 15645;
 
         /// <summary>
+        /// The identifier for the LinAxisWithGripper_Skills_MoveToAbsPosSkill_StateMachine_Running_ContinuousParameter Object.
+        /// </summary>
+        public const uint LinAxisWithGripper_Skills_MoveToAbsPosSkill_StateMachine_Running_ContinuousParameter = 15647;
+
+        /// <summary>
         /// The identifier for the LinAxisWithGripper_Skills_MoveToAbsPosSkill_StateMachine_Running_ContinuousParameter_OutputParameter Object.
         /// </summary>
         public const uint LinAxisWithGripper_Skills_MoveToAbsPosSkill_StateMachine_Running_ContinuousParameter_OutputParameter = 15649;
@@ -1023,9 +1188,19 @@ namespace Example.LinearAxisWithGripper
         public const uint GraspSkillType_StateMachine_CurrentState_Id = 15042;
 
         /// <summary>
+        /// The identifier for the GraspSkillType_StateMachine_LastTransition Variable.
+        /// </summary>
+        public const uint GraspSkillType_StateMachine_LastTransition = 15046;
+
+        /// <summary>
         /// The identifier for the GraspSkillType_StateMachine_LastTransition_Id Variable.
         /// </summary>
         public const uint GraspSkillType_StateMachine_LastTransition_Id = 15047;
+
+        /// <summary>
+        /// The identifier for the GraspSkillType_StateMachine_LastTransition_TransitionTime Variable.
+        /// </summary>
+        public const uint GraspSkillType_StateMachine_LastTransition_TransitionTime = 15050;
 
         /// <summary>
         /// The identifier for the GraspSkillType_StateMachine_Start_InputArguments Variable.
@@ -1128,9 +1303,19 @@ namespace Example.LinearAxisWithGripper
         public const uint ReleaseSkillType_StateMachine_CurrentState_Id = 15116;
 
         /// <summary>
+        /// The identifier for the ReleaseSkillType_StateMachine_LastTransition Variable.
+        /// </summary>
+        public const uint ReleaseSkillType_StateMachine_LastTransition = 15120;
+
+        /// <summary>
         /// The identifier for the ReleaseSkillType_StateMachine_LastTransition_Id Variable.
         /// </summary>
         public const uint ReleaseSkillType_StateMachine_LastTransition_Id = 15121;
+
+        /// <summary>
+        /// The identifier for the ReleaseSkillType_StateMachine_LastTransition_TransitionTime Variable.
+        /// </summary>
+        public const uint ReleaseSkillType_StateMachine_LastTransition_TransitionTime = 15124;
 
         /// <summary>
         /// The identifier for the ReleaseSkillType_StateMachine_Start_InputArguments Variable.
@@ -1228,9 +1413,19 @@ namespace Example.LinearAxisWithGripper
         public const uint MoveToAbsPosSkillType_StateMachine_CurrentState_Id = 15189;
 
         /// <summary>
+        /// The identifier for the MoveToAbsPosSkillType_StateMachine_LastTransition Variable.
+        /// </summary>
+        public const uint MoveToAbsPosSkillType_StateMachine_LastTransition = 15193;
+
+        /// <summary>
         /// The identifier for the MoveToAbsPosSkillType_StateMachine_LastTransition_Id Variable.
         /// </summary>
         public const uint MoveToAbsPosSkillType_StateMachine_LastTransition_Id = 15194;
+
+        /// <summary>
+        /// The identifier for the MoveToAbsPosSkillType_StateMachine_LastTransition_TransitionTime Variable.
+        /// </summary>
+        public const uint MoveToAbsPosSkillType_StateMachine_LastTransition_TransitionTime = 15197;
 
         /// <summary>
         /// The identifier for the MoveToAbsPosSkillType_StateMachine_Start_InputArguments Variable.
@@ -1328,9 +1523,19 @@ namespace Example.LinearAxisWithGripper
         public const uint PickSkillType_StateMachine_CurrentState_Id = 15263;
 
         /// <summary>
+        /// The identifier for the PickSkillType_StateMachine_LastTransition Variable.
+        /// </summary>
+        public const uint PickSkillType_StateMachine_LastTransition = 15267;
+
+        /// <summary>
         /// The identifier for the PickSkillType_StateMachine_LastTransition_Id Variable.
         /// </summary>
         public const uint PickSkillType_StateMachine_LastTransition_Id = 15268;
+
+        /// <summary>
+        /// The identifier for the PickSkillType_StateMachine_LastTransition_TransitionTime Variable.
+        /// </summary>
+        public const uint PickSkillType_StateMachine_LastTransition_TransitionTime = 15271;
 
         /// <summary>
         /// The identifier for the PickSkillType_StateMachine_Start_InputArguments Variable.
@@ -1643,9 +1848,19 @@ namespace Example.LinearAxisWithGripper
         public const uint LinAxisWithGripper_Skills_ReleaseSkill_StateMachine_CurrentState_Id = 15475;
 
         /// <summary>
+        /// The identifier for the LinAxisWithGripper_Skills_ReleaseSkill_StateMachine_LastTransition Variable.
+        /// </summary>
+        public const uint LinAxisWithGripper_Skills_ReleaseSkill_StateMachine_LastTransition = 15479;
+
+        /// <summary>
         /// The identifier for the LinAxisWithGripper_Skills_ReleaseSkill_StateMachine_LastTransition_Id Variable.
         /// </summary>
         public const uint LinAxisWithGripper_Skills_ReleaseSkill_StateMachine_LastTransition_Id = 15480;
+
+        /// <summary>
+        /// The identifier for the LinAxisWithGripper_Skills_ReleaseSkill_StateMachine_LastTransition_TransitionTime Variable.
+        /// </summary>
+        public const uint LinAxisWithGripper_Skills_ReleaseSkill_StateMachine_LastTransition_TransitionTime = 15483;
 
         /// <summary>
         /// The identifier for the LinAxisWithGripper_Skills_ReleaseSkill_StateMachine_Start_InputArguments Variable.
@@ -1738,9 +1953,19 @@ namespace Example.LinearAxisWithGripper
         public const uint LinAxisWithGripper_Skills_GraspSkill_StateMachine_CurrentState_Id = 15546;
 
         /// <summary>
+        /// The identifier for the LinAxisWithGripper_Skills_GraspSkill_StateMachine_LastTransition Variable.
+        /// </summary>
+        public const uint LinAxisWithGripper_Skills_GraspSkill_StateMachine_LastTransition = 15550;
+
+        /// <summary>
         /// The identifier for the LinAxisWithGripper_Skills_GraspSkill_StateMachine_LastTransition_Id Variable.
         /// </summary>
         public const uint LinAxisWithGripper_Skills_GraspSkill_StateMachine_LastTransition_Id = 15551;
+
+        /// <summary>
+        /// The identifier for the LinAxisWithGripper_Skills_GraspSkill_StateMachine_LastTransition_TransitionTime Variable.
+        /// </summary>
+        public const uint LinAxisWithGripper_Skills_GraspSkill_StateMachine_LastTransition_TransitionTime = 15554;
 
         /// <summary>
         /// The identifier for the LinAxisWithGripper_Skills_GraspSkill_StateMachine_Start_InputArguments Variable.
@@ -1838,9 +2063,19 @@ namespace Example.LinearAxisWithGripper
         public const uint LinAxisWithGripper_Skills_MoveToAbsPosSkill_StateMachine_CurrentState_Id = 15618;
 
         /// <summary>
+        /// The identifier for the LinAxisWithGripper_Skills_MoveToAbsPosSkill_StateMachine_LastTransition Variable.
+        /// </summary>
+        public const uint LinAxisWithGripper_Skills_MoveToAbsPosSkill_StateMachine_LastTransition = 15622;
+
+        /// <summary>
         /// The identifier for the LinAxisWithGripper_Skills_MoveToAbsPosSkill_StateMachine_LastTransition_Id Variable.
         /// </summary>
         public const uint LinAxisWithGripper_Skills_MoveToAbsPosSkill_StateMachine_LastTransition_Id = 15623;
+
+        /// <summary>
+        /// The identifier for the LinAxisWithGripper_Skills_MoveToAbsPosSkill_StateMachine_LastTransition_TransitionTime Variable.
+        /// </summary>
+        public const uint LinAxisWithGripper_Skills_MoveToAbsPosSkill_StateMachine_LastTransition_TransitionTime = 15626;
 
         /// <summary>
         /// The identifier for the LinAxisWithGripper_Skills_MoveToAbsPosSkill_StateMachine_Start_InputArguments Variable.
@@ -1938,9 +2173,19 @@ namespace Example.LinearAxisWithGripper
         public const uint LinAxisWithGripper_Skills_PickSkill_StateMachine_CurrentState_Id = 15690;
 
         /// <summary>
+        /// The identifier for the LinAxisWithGripper_Skills_PickSkill_StateMachine_LastTransition Variable.
+        /// </summary>
+        public const uint LinAxisWithGripper_Skills_PickSkill_StateMachine_LastTransition = 15694;
+
+        /// <summary>
         /// The identifier for the LinAxisWithGripper_Skills_PickSkill_StateMachine_LastTransition_Id Variable.
         /// </summary>
         public const uint LinAxisWithGripper_Skills_PickSkill_StateMachine_LastTransition_Id = 15695;
+
+        /// <summary>
+        /// The identifier for the LinAxisWithGripper_Skills_PickSkill_StateMachine_LastTransition_TransitionTime Variable.
+        /// </summary>
+        public const uint LinAxisWithGripper_Skills_PickSkill_StateMachine_LastTransition_TransitionTime = 15698;
 
         /// <summary>
         /// The identifier for the LinAxisWithGripper_Skills_PickSkill_StateMachine_Start_InputArguments Variable.
@@ -2058,9 +2303,49 @@ namespace Example.LinearAxisWithGripper
         public static readonly ExpandedNodeId GraspSkillType_StateMachine_Start = new ExpandedNodeId(Example.LinearAxisWithGripper.Methods.GraspSkillType_StateMachine_Start, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
 
         /// <summary>
+        /// The identifier for the GraspSkillType_StateMachine_Halt Method.
+        /// </summary>
+        public static readonly ExpandedNodeId GraspSkillType_StateMachine_Halt = new ExpandedNodeId(Example.LinearAxisWithGripper.Methods.GraspSkillType_StateMachine_Halt, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
+
+        /// <summary>
+        /// The identifier for the GraspSkillType_StateMachine_Reset Method.
+        /// </summary>
+        public static readonly ExpandedNodeId GraspSkillType_StateMachine_Reset = new ExpandedNodeId(Example.LinearAxisWithGripper.Methods.GraspSkillType_StateMachine_Reset, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
+
+        /// <summary>
+        /// The identifier for the GraspSkillType_StateMachine_Resume Method.
+        /// </summary>
+        public static readonly ExpandedNodeId GraspSkillType_StateMachine_Resume = new ExpandedNodeId(Example.LinearAxisWithGripper.Methods.GraspSkillType_StateMachine_Resume, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
+
+        /// <summary>
+        /// The identifier for the GraspSkillType_StateMachine_Suspend Method.
+        /// </summary>
+        public static readonly ExpandedNodeId GraspSkillType_StateMachine_Suspend = new ExpandedNodeId(Example.LinearAxisWithGripper.Methods.GraspSkillType_StateMachine_Suspend, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
+
+        /// <summary>
         /// The identifier for the ReleaseSkillType_StateMachine_Start Method.
         /// </summary>
         public static readonly ExpandedNodeId ReleaseSkillType_StateMachine_Start = new ExpandedNodeId(Example.LinearAxisWithGripper.Methods.ReleaseSkillType_StateMachine_Start, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
+
+        /// <summary>
+        /// The identifier for the ReleaseSkillType_StateMachine_Halt Method.
+        /// </summary>
+        public static readonly ExpandedNodeId ReleaseSkillType_StateMachine_Halt = new ExpandedNodeId(Example.LinearAxisWithGripper.Methods.ReleaseSkillType_StateMachine_Halt, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
+
+        /// <summary>
+        /// The identifier for the ReleaseSkillType_StateMachine_Reset Method.
+        /// </summary>
+        public static readonly ExpandedNodeId ReleaseSkillType_StateMachine_Reset = new ExpandedNodeId(Example.LinearAxisWithGripper.Methods.ReleaseSkillType_StateMachine_Reset, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
+
+        /// <summary>
+        /// The identifier for the ReleaseSkillType_StateMachine_Resume Method.
+        /// </summary>
+        public static readonly ExpandedNodeId ReleaseSkillType_StateMachine_Resume = new ExpandedNodeId(Example.LinearAxisWithGripper.Methods.ReleaseSkillType_StateMachine_Resume, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
+
+        /// <summary>
+        /// The identifier for the ReleaseSkillType_StateMachine_Suspend Method.
+        /// </summary>
+        public static readonly ExpandedNodeId ReleaseSkillType_StateMachine_Suspend = new ExpandedNodeId(Example.LinearAxisWithGripper.Methods.ReleaseSkillType_StateMachine_Suspend, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
 
         /// <summary>
         /// The identifier for the MoveToAbsPosSkillType_StateMachine_Start Method.
@@ -2068,9 +2353,49 @@ namespace Example.LinearAxisWithGripper
         public static readonly ExpandedNodeId MoveToAbsPosSkillType_StateMachine_Start = new ExpandedNodeId(Example.LinearAxisWithGripper.Methods.MoveToAbsPosSkillType_StateMachine_Start, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
 
         /// <summary>
+        /// The identifier for the MoveToAbsPosSkillType_StateMachine_Halt Method.
+        /// </summary>
+        public static readonly ExpandedNodeId MoveToAbsPosSkillType_StateMachine_Halt = new ExpandedNodeId(Example.LinearAxisWithGripper.Methods.MoveToAbsPosSkillType_StateMachine_Halt, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
+
+        /// <summary>
+        /// The identifier for the MoveToAbsPosSkillType_StateMachine_Reset Method.
+        /// </summary>
+        public static readonly ExpandedNodeId MoveToAbsPosSkillType_StateMachine_Reset = new ExpandedNodeId(Example.LinearAxisWithGripper.Methods.MoveToAbsPosSkillType_StateMachine_Reset, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
+
+        /// <summary>
+        /// The identifier for the MoveToAbsPosSkillType_StateMachine_Resume Method.
+        /// </summary>
+        public static readonly ExpandedNodeId MoveToAbsPosSkillType_StateMachine_Resume = new ExpandedNodeId(Example.LinearAxisWithGripper.Methods.MoveToAbsPosSkillType_StateMachine_Resume, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
+
+        /// <summary>
+        /// The identifier for the MoveToAbsPosSkillType_StateMachine_Suspend Method.
+        /// </summary>
+        public static readonly ExpandedNodeId MoveToAbsPosSkillType_StateMachine_Suspend = new ExpandedNodeId(Example.LinearAxisWithGripper.Methods.MoveToAbsPosSkillType_StateMachine_Suspend, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
+
+        /// <summary>
         /// The identifier for the PickSkillType_StateMachine_Start Method.
         /// </summary>
         public static readonly ExpandedNodeId PickSkillType_StateMachine_Start = new ExpandedNodeId(Example.LinearAxisWithGripper.Methods.PickSkillType_StateMachine_Start, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
+
+        /// <summary>
+        /// The identifier for the PickSkillType_StateMachine_Halt Method.
+        /// </summary>
+        public static readonly ExpandedNodeId PickSkillType_StateMachine_Halt = new ExpandedNodeId(Example.LinearAxisWithGripper.Methods.PickSkillType_StateMachine_Halt, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
+
+        /// <summary>
+        /// The identifier for the PickSkillType_StateMachine_Reset Method.
+        /// </summary>
+        public static readonly ExpandedNodeId PickSkillType_StateMachine_Reset = new ExpandedNodeId(Example.LinearAxisWithGripper.Methods.PickSkillType_StateMachine_Reset, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
+
+        /// <summary>
+        /// The identifier for the PickSkillType_StateMachine_Resume Method.
+        /// </summary>
+        public static readonly ExpandedNodeId PickSkillType_StateMachine_Resume = new ExpandedNodeId(Example.LinearAxisWithGripper.Methods.PickSkillType_StateMachine_Resume, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
+
+        /// <summary>
+        /// The identifier for the PickSkillType_StateMachine_Suspend Method.
+        /// </summary>
+        public static readonly ExpandedNodeId PickSkillType_StateMachine_Suspend = new ExpandedNodeId(Example.LinearAxisWithGripper.Methods.PickSkillType_StateMachine_Suspend, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
 
         /// <summary>
         /// The identifier for the LinAxisWithGripperType_Lock_InitLock Method.
@@ -2158,9 +2483,49 @@ namespace Example.LinearAxisWithGripper
         public static readonly ExpandedNodeId LinAxisWithGripper_Skills_ReleaseSkill_StateMachine_Start = new ExpandedNodeId(Example.LinearAxisWithGripper.Methods.LinAxisWithGripper_Skills_ReleaseSkill_StateMachine_Start, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
 
         /// <summary>
+        /// The identifier for the LinAxisWithGripper_Skills_ReleaseSkill_StateMachine_Halt Method.
+        /// </summary>
+        public static readonly ExpandedNodeId LinAxisWithGripper_Skills_ReleaseSkill_StateMachine_Halt = new ExpandedNodeId(Example.LinearAxisWithGripper.Methods.LinAxisWithGripper_Skills_ReleaseSkill_StateMachine_Halt, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
+
+        /// <summary>
+        /// The identifier for the LinAxisWithGripper_Skills_ReleaseSkill_StateMachine_Reset Method.
+        /// </summary>
+        public static readonly ExpandedNodeId LinAxisWithGripper_Skills_ReleaseSkill_StateMachine_Reset = new ExpandedNodeId(Example.LinearAxisWithGripper.Methods.LinAxisWithGripper_Skills_ReleaseSkill_StateMachine_Reset, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
+
+        /// <summary>
+        /// The identifier for the LinAxisWithGripper_Skills_ReleaseSkill_StateMachine_Resume Method.
+        /// </summary>
+        public static readonly ExpandedNodeId LinAxisWithGripper_Skills_ReleaseSkill_StateMachine_Resume = new ExpandedNodeId(Example.LinearAxisWithGripper.Methods.LinAxisWithGripper_Skills_ReleaseSkill_StateMachine_Resume, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
+
+        /// <summary>
+        /// The identifier for the LinAxisWithGripper_Skills_ReleaseSkill_StateMachine_Suspend Method.
+        /// </summary>
+        public static readonly ExpandedNodeId LinAxisWithGripper_Skills_ReleaseSkill_StateMachine_Suspend = new ExpandedNodeId(Example.LinearAxisWithGripper.Methods.LinAxisWithGripper_Skills_ReleaseSkill_StateMachine_Suspend, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
+
+        /// <summary>
         /// The identifier for the LinAxisWithGripper_Skills_GraspSkill_StateMachine_Start Method.
         /// </summary>
         public static readonly ExpandedNodeId LinAxisWithGripper_Skills_GraspSkill_StateMachine_Start = new ExpandedNodeId(Example.LinearAxisWithGripper.Methods.LinAxisWithGripper_Skills_GraspSkill_StateMachine_Start, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
+
+        /// <summary>
+        /// The identifier for the LinAxisWithGripper_Skills_GraspSkill_StateMachine_Halt Method.
+        /// </summary>
+        public static readonly ExpandedNodeId LinAxisWithGripper_Skills_GraspSkill_StateMachine_Halt = new ExpandedNodeId(Example.LinearAxisWithGripper.Methods.LinAxisWithGripper_Skills_GraspSkill_StateMachine_Halt, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
+
+        /// <summary>
+        /// The identifier for the LinAxisWithGripper_Skills_GraspSkill_StateMachine_Reset Method.
+        /// </summary>
+        public static readonly ExpandedNodeId LinAxisWithGripper_Skills_GraspSkill_StateMachine_Reset = new ExpandedNodeId(Example.LinearAxisWithGripper.Methods.LinAxisWithGripper_Skills_GraspSkill_StateMachine_Reset, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
+
+        /// <summary>
+        /// The identifier for the LinAxisWithGripper_Skills_GraspSkill_StateMachine_Resume Method.
+        /// </summary>
+        public static readonly ExpandedNodeId LinAxisWithGripper_Skills_GraspSkill_StateMachine_Resume = new ExpandedNodeId(Example.LinearAxisWithGripper.Methods.LinAxisWithGripper_Skills_GraspSkill_StateMachine_Resume, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
+
+        /// <summary>
+        /// The identifier for the LinAxisWithGripper_Skills_GraspSkill_StateMachine_Suspend Method.
+        /// </summary>
+        public static readonly ExpandedNodeId LinAxisWithGripper_Skills_GraspSkill_StateMachine_Suspend = new ExpandedNodeId(Example.LinearAxisWithGripper.Methods.LinAxisWithGripper_Skills_GraspSkill_StateMachine_Suspend, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
 
         /// <summary>
         /// The identifier for the LinAxisWithGripper_Skills_MoveToAbsPosSkill_StateMachine_Start Method.
@@ -2168,9 +2533,49 @@ namespace Example.LinearAxisWithGripper
         public static readonly ExpandedNodeId LinAxisWithGripper_Skills_MoveToAbsPosSkill_StateMachine_Start = new ExpandedNodeId(Example.LinearAxisWithGripper.Methods.LinAxisWithGripper_Skills_MoveToAbsPosSkill_StateMachine_Start, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
 
         /// <summary>
+        /// The identifier for the LinAxisWithGripper_Skills_MoveToAbsPosSkill_StateMachine_Halt Method.
+        /// </summary>
+        public static readonly ExpandedNodeId LinAxisWithGripper_Skills_MoveToAbsPosSkill_StateMachine_Halt = new ExpandedNodeId(Example.LinearAxisWithGripper.Methods.LinAxisWithGripper_Skills_MoveToAbsPosSkill_StateMachine_Halt, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
+
+        /// <summary>
+        /// The identifier for the LinAxisWithGripper_Skills_MoveToAbsPosSkill_StateMachine_Reset Method.
+        /// </summary>
+        public static readonly ExpandedNodeId LinAxisWithGripper_Skills_MoveToAbsPosSkill_StateMachine_Reset = new ExpandedNodeId(Example.LinearAxisWithGripper.Methods.LinAxisWithGripper_Skills_MoveToAbsPosSkill_StateMachine_Reset, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
+
+        /// <summary>
+        /// The identifier for the LinAxisWithGripper_Skills_MoveToAbsPosSkill_StateMachine_Resume Method.
+        /// </summary>
+        public static readonly ExpandedNodeId LinAxisWithGripper_Skills_MoveToAbsPosSkill_StateMachine_Resume = new ExpandedNodeId(Example.LinearAxisWithGripper.Methods.LinAxisWithGripper_Skills_MoveToAbsPosSkill_StateMachine_Resume, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
+
+        /// <summary>
+        /// The identifier for the LinAxisWithGripper_Skills_MoveToAbsPosSkill_StateMachine_Suspend Method.
+        /// </summary>
+        public static readonly ExpandedNodeId LinAxisWithGripper_Skills_MoveToAbsPosSkill_StateMachine_Suspend = new ExpandedNodeId(Example.LinearAxisWithGripper.Methods.LinAxisWithGripper_Skills_MoveToAbsPosSkill_StateMachine_Suspend, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
+
+        /// <summary>
         /// The identifier for the LinAxisWithGripper_Skills_PickSkill_StateMachine_Start Method.
         /// </summary>
         public static readonly ExpandedNodeId LinAxisWithGripper_Skills_PickSkill_StateMachine_Start = new ExpandedNodeId(Example.LinearAxisWithGripper.Methods.LinAxisWithGripper_Skills_PickSkill_StateMachine_Start, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
+
+        /// <summary>
+        /// The identifier for the LinAxisWithGripper_Skills_PickSkill_StateMachine_Halt Method.
+        /// </summary>
+        public static readonly ExpandedNodeId LinAxisWithGripper_Skills_PickSkill_StateMachine_Halt = new ExpandedNodeId(Example.LinearAxisWithGripper.Methods.LinAxisWithGripper_Skills_PickSkill_StateMachine_Halt, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
+
+        /// <summary>
+        /// The identifier for the LinAxisWithGripper_Skills_PickSkill_StateMachine_Reset Method.
+        /// </summary>
+        public static readonly ExpandedNodeId LinAxisWithGripper_Skills_PickSkill_StateMachine_Reset = new ExpandedNodeId(Example.LinearAxisWithGripper.Methods.LinAxisWithGripper_Skills_PickSkill_StateMachine_Reset, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
+
+        /// <summary>
+        /// The identifier for the LinAxisWithGripper_Skills_PickSkill_StateMachine_Resume Method.
+        /// </summary>
+        public static readonly ExpandedNodeId LinAxisWithGripper_Skills_PickSkill_StateMachine_Resume = new ExpandedNodeId(Example.LinearAxisWithGripper.Methods.LinAxisWithGripper_Skills_PickSkill_StateMachine_Resume, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
+
+        /// <summary>
+        /// The identifier for the LinAxisWithGripper_Skills_PickSkill_StateMachine_Suspend Method.
+        /// </summary>
+        public static readonly ExpandedNodeId LinAxisWithGripper_Skills_PickSkill_StateMachine_Suspend = new ExpandedNodeId(Example.LinearAxisWithGripper.Methods.LinAxisWithGripper_Skills_PickSkill_StateMachine_Suspend, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
     }
     #endregion
 
@@ -2678,6 +3083,11 @@ namespace Example.LinearAxisWithGripper
         public static readonly ExpandedNodeId LinAxisWithGripper_Skills_MoveToAbsPosSkill_StateMachine_Running = new ExpandedNodeId(Example.LinearAxisWithGripper.Objects.LinAxisWithGripper_Skills_MoveToAbsPosSkill_StateMachine_Running, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
 
         /// <summary>
+        /// The identifier for the LinAxisWithGripper_Skills_MoveToAbsPosSkill_StateMachine_Running_ContinuousParameter Object.
+        /// </summary>
+        public static readonly ExpandedNodeId LinAxisWithGripper_Skills_MoveToAbsPosSkill_StateMachine_Running_ContinuousParameter = new ExpandedNodeId(Example.LinearAxisWithGripper.Objects.LinAxisWithGripper_Skills_MoveToAbsPosSkill_StateMachine_Running_ContinuousParameter, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
+
+        /// <summary>
         /// The identifier for the LinAxisWithGripper_Skills_MoveToAbsPosSkill_StateMachine_Running_ContinuousParameter_OutputParameter Object.
         /// </summary>
         public static readonly ExpandedNodeId LinAxisWithGripper_Skills_MoveToAbsPosSkill_StateMachine_Running_ContinuousParameter_OutputParameter = new ExpandedNodeId(Example.LinearAxisWithGripper.Objects.LinAxisWithGripper_Skills_MoveToAbsPosSkill_StateMachine_Running_ContinuousParameter_OutputParameter, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
@@ -2998,9 +3408,19 @@ namespace Example.LinearAxisWithGripper
         public static readonly ExpandedNodeId GraspSkillType_StateMachine_CurrentState_Id = new ExpandedNodeId(Example.LinearAxisWithGripper.Variables.GraspSkillType_StateMachine_CurrentState_Id, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
 
         /// <summary>
+        /// The identifier for the GraspSkillType_StateMachine_LastTransition Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId GraspSkillType_StateMachine_LastTransition = new ExpandedNodeId(Example.LinearAxisWithGripper.Variables.GraspSkillType_StateMachine_LastTransition, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
+
+        /// <summary>
         /// The identifier for the GraspSkillType_StateMachine_LastTransition_Id Variable.
         /// </summary>
         public static readonly ExpandedNodeId GraspSkillType_StateMachine_LastTransition_Id = new ExpandedNodeId(Example.LinearAxisWithGripper.Variables.GraspSkillType_StateMachine_LastTransition_Id, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
+
+        /// <summary>
+        /// The identifier for the GraspSkillType_StateMachine_LastTransition_TransitionTime Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId GraspSkillType_StateMachine_LastTransition_TransitionTime = new ExpandedNodeId(Example.LinearAxisWithGripper.Variables.GraspSkillType_StateMachine_LastTransition_TransitionTime, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
 
         /// <summary>
         /// The identifier for the GraspSkillType_StateMachine_Start_InputArguments Variable.
@@ -3103,9 +3523,19 @@ namespace Example.LinearAxisWithGripper
         public static readonly ExpandedNodeId ReleaseSkillType_StateMachine_CurrentState_Id = new ExpandedNodeId(Example.LinearAxisWithGripper.Variables.ReleaseSkillType_StateMachine_CurrentState_Id, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
 
         /// <summary>
+        /// The identifier for the ReleaseSkillType_StateMachine_LastTransition Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId ReleaseSkillType_StateMachine_LastTransition = new ExpandedNodeId(Example.LinearAxisWithGripper.Variables.ReleaseSkillType_StateMachine_LastTransition, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
+
+        /// <summary>
         /// The identifier for the ReleaseSkillType_StateMachine_LastTransition_Id Variable.
         /// </summary>
         public static readonly ExpandedNodeId ReleaseSkillType_StateMachine_LastTransition_Id = new ExpandedNodeId(Example.LinearAxisWithGripper.Variables.ReleaseSkillType_StateMachine_LastTransition_Id, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
+
+        /// <summary>
+        /// The identifier for the ReleaseSkillType_StateMachine_LastTransition_TransitionTime Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId ReleaseSkillType_StateMachine_LastTransition_TransitionTime = new ExpandedNodeId(Example.LinearAxisWithGripper.Variables.ReleaseSkillType_StateMachine_LastTransition_TransitionTime, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
 
         /// <summary>
         /// The identifier for the ReleaseSkillType_StateMachine_Start_InputArguments Variable.
@@ -3203,9 +3633,19 @@ namespace Example.LinearAxisWithGripper
         public static readonly ExpandedNodeId MoveToAbsPosSkillType_StateMachine_CurrentState_Id = new ExpandedNodeId(Example.LinearAxisWithGripper.Variables.MoveToAbsPosSkillType_StateMachine_CurrentState_Id, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
 
         /// <summary>
+        /// The identifier for the MoveToAbsPosSkillType_StateMachine_LastTransition Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId MoveToAbsPosSkillType_StateMachine_LastTransition = new ExpandedNodeId(Example.LinearAxisWithGripper.Variables.MoveToAbsPosSkillType_StateMachine_LastTransition, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
+
+        /// <summary>
         /// The identifier for the MoveToAbsPosSkillType_StateMachine_LastTransition_Id Variable.
         /// </summary>
         public static readonly ExpandedNodeId MoveToAbsPosSkillType_StateMachine_LastTransition_Id = new ExpandedNodeId(Example.LinearAxisWithGripper.Variables.MoveToAbsPosSkillType_StateMachine_LastTransition_Id, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
+
+        /// <summary>
+        /// The identifier for the MoveToAbsPosSkillType_StateMachine_LastTransition_TransitionTime Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId MoveToAbsPosSkillType_StateMachine_LastTransition_TransitionTime = new ExpandedNodeId(Example.LinearAxisWithGripper.Variables.MoveToAbsPosSkillType_StateMachine_LastTransition_TransitionTime, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
 
         /// <summary>
         /// The identifier for the MoveToAbsPosSkillType_StateMachine_Start_InputArguments Variable.
@@ -3303,9 +3743,19 @@ namespace Example.LinearAxisWithGripper
         public static readonly ExpandedNodeId PickSkillType_StateMachine_CurrentState_Id = new ExpandedNodeId(Example.LinearAxisWithGripper.Variables.PickSkillType_StateMachine_CurrentState_Id, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
 
         /// <summary>
+        /// The identifier for the PickSkillType_StateMachine_LastTransition Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId PickSkillType_StateMachine_LastTransition = new ExpandedNodeId(Example.LinearAxisWithGripper.Variables.PickSkillType_StateMachine_LastTransition, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
+
+        /// <summary>
         /// The identifier for the PickSkillType_StateMachine_LastTransition_Id Variable.
         /// </summary>
         public static readonly ExpandedNodeId PickSkillType_StateMachine_LastTransition_Id = new ExpandedNodeId(Example.LinearAxisWithGripper.Variables.PickSkillType_StateMachine_LastTransition_Id, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
+
+        /// <summary>
+        /// The identifier for the PickSkillType_StateMachine_LastTransition_TransitionTime Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId PickSkillType_StateMachine_LastTransition_TransitionTime = new ExpandedNodeId(Example.LinearAxisWithGripper.Variables.PickSkillType_StateMachine_LastTransition_TransitionTime, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
 
         /// <summary>
         /// The identifier for the PickSkillType_StateMachine_Start_InputArguments Variable.
@@ -3618,9 +4068,19 @@ namespace Example.LinearAxisWithGripper
         public static readonly ExpandedNodeId LinAxisWithGripper_Skills_ReleaseSkill_StateMachine_CurrentState_Id = new ExpandedNodeId(Example.LinearAxisWithGripper.Variables.LinAxisWithGripper_Skills_ReleaseSkill_StateMachine_CurrentState_Id, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
 
         /// <summary>
+        /// The identifier for the LinAxisWithGripper_Skills_ReleaseSkill_StateMachine_LastTransition Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId LinAxisWithGripper_Skills_ReleaseSkill_StateMachine_LastTransition = new ExpandedNodeId(Example.LinearAxisWithGripper.Variables.LinAxisWithGripper_Skills_ReleaseSkill_StateMachine_LastTransition, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
+
+        /// <summary>
         /// The identifier for the LinAxisWithGripper_Skills_ReleaseSkill_StateMachine_LastTransition_Id Variable.
         /// </summary>
         public static readonly ExpandedNodeId LinAxisWithGripper_Skills_ReleaseSkill_StateMachine_LastTransition_Id = new ExpandedNodeId(Example.LinearAxisWithGripper.Variables.LinAxisWithGripper_Skills_ReleaseSkill_StateMachine_LastTransition_Id, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
+
+        /// <summary>
+        /// The identifier for the LinAxisWithGripper_Skills_ReleaseSkill_StateMachine_LastTransition_TransitionTime Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId LinAxisWithGripper_Skills_ReleaseSkill_StateMachine_LastTransition_TransitionTime = new ExpandedNodeId(Example.LinearAxisWithGripper.Variables.LinAxisWithGripper_Skills_ReleaseSkill_StateMachine_LastTransition_TransitionTime, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
 
         /// <summary>
         /// The identifier for the LinAxisWithGripper_Skills_ReleaseSkill_StateMachine_Start_InputArguments Variable.
@@ -3713,9 +4173,19 @@ namespace Example.LinearAxisWithGripper
         public static readonly ExpandedNodeId LinAxisWithGripper_Skills_GraspSkill_StateMachine_CurrentState_Id = new ExpandedNodeId(Example.LinearAxisWithGripper.Variables.LinAxisWithGripper_Skills_GraspSkill_StateMachine_CurrentState_Id, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
 
         /// <summary>
+        /// The identifier for the LinAxisWithGripper_Skills_GraspSkill_StateMachine_LastTransition Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId LinAxisWithGripper_Skills_GraspSkill_StateMachine_LastTransition = new ExpandedNodeId(Example.LinearAxisWithGripper.Variables.LinAxisWithGripper_Skills_GraspSkill_StateMachine_LastTransition, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
+
+        /// <summary>
         /// The identifier for the LinAxisWithGripper_Skills_GraspSkill_StateMachine_LastTransition_Id Variable.
         /// </summary>
         public static readonly ExpandedNodeId LinAxisWithGripper_Skills_GraspSkill_StateMachine_LastTransition_Id = new ExpandedNodeId(Example.LinearAxisWithGripper.Variables.LinAxisWithGripper_Skills_GraspSkill_StateMachine_LastTransition_Id, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
+
+        /// <summary>
+        /// The identifier for the LinAxisWithGripper_Skills_GraspSkill_StateMachine_LastTransition_TransitionTime Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId LinAxisWithGripper_Skills_GraspSkill_StateMachine_LastTransition_TransitionTime = new ExpandedNodeId(Example.LinearAxisWithGripper.Variables.LinAxisWithGripper_Skills_GraspSkill_StateMachine_LastTransition_TransitionTime, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
 
         /// <summary>
         /// The identifier for the LinAxisWithGripper_Skills_GraspSkill_StateMachine_Start_InputArguments Variable.
@@ -3813,9 +4283,19 @@ namespace Example.LinearAxisWithGripper
         public static readonly ExpandedNodeId LinAxisWithGripper_Skills_MoveToAbsPosSkill_StateMachine_CurrentState_Id = new ExpandedNodeId(Example.LinearAxisWithGripper.Variables.LinAxisWithGripper_Skills_MoveToAbsPosSkill_StateMachine_CurrentState_Id, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
 
         /// <summary>
+        /// The identifier for the LinAxisWithGripper_Skills_MoveToAbsPosSkill_StateMachine_LastTransition Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId LinAxisWithGripper_Skills_MoveToAbsPosSkill_StateMachine_LastTransition = new ExpandedNodeId(Example.LinearAxisWithGripper.Variables.LinAxisWithGripper_Skills_MoveToAbsPosSkill_StateMachine_LastTransition, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
+
+        /// <summary>
         /// The identifier for the LinAxisWithGripper_Skills_MoveToAbsPosSkill_StateMachine_LastTransition_Id Variable.
         /// </summary>
         public static readonly ExpandedNodeId LinAxisWithGripper_Skills_MoveToAbsPosSkill_StateMachine_LastTransition_Id = new ExpandedNodeId(Example.LinearAxisWithGripper.Variables.LinAxisWithGripper_Skills_MoveToAbsPosSkill_StateMachine_LastTransition_Id, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
+
+        /// <summary>
+        /// The identifier for the LinAxisWithGripper_Skills_MoveToAbsPosSkill_StateMachine_LastTransition_TransitionTime Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId LinAxisWithGripper_Skills_MoveToAbsPosSkill_StateMachine_LastTransition_TransitionTime = new ExpandedNodeId(Example.LinearAxisWithGripper.Variables.LinAxisWithGripper_Skills_MoveToAbsPosSkill_StateMachine_LastTransition_TransitionTime, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
 
         /// <summary>
         /// The identifier for the LinAxisWithGripper_Skills_MoveToAbsPosSkill_StateMachine_Start_InputArguments Variable.
@@ -3913,9 +4393,19 @@ namespace Example.LinearAxisWithGripper
         public static readonly ExpandedNodeId LinAxisWithGripper_Skills_PickSkill_StateMachine_CurrentState_Id = new ExpandedNodeId(Example.LinearAxisWithGripper.Variables.LinAxisWithGripper_Skills_PickSkill_StateMachine_CurrentState_Id, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
 
         /// <summary>
+        /// The identifier for the LinAxisWithGripper_Skills_PickSkill_StateMachine_LastTransition Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId LinAxisWithGripper_Skills_PickSkill_StateMachine_LastTransition = new ExpandedNodeId(Example.LinearAxisWithGripper.Variables.LinAxisWithGripper_Skills_PickSkill_StateMachine_LastTransition, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
+
+        /// <summary>
         /// The identifier for the LinAxisWithGripper_Skills_PickSkill_StateMachine_LastTransition_Id Variable.
         /// </summary>
         public static readonly ExpandedNodeId LinAxisWithGripper_Skills_PickSkill_StateMachine_LastTransition_Id = new ExpandedNodeId(Example.LinearAxisWithGripper.Variables.LinAxisWithGripper_Skills_PickSkill_StateMachine_LastTransition_Id, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
+
+        /// <summary>
+        /// The identifier for the LinAxisWithGripper_Skills_PickSkill_StateMachine_LastTransition_TransitionTime Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId LinAxisWithGripper_Skills_PickSkill_StateMachine_LastTransition_TransitionTime = new ExpandedNodeId(Example.LinearAxisWithGripper.Variables.LinAxisWithGripper_Skills_PickSkill_StateMachine_LastTransition_TransitionTime, Example.LinearAxisWithGripper.Namespaces.ExampleLinearAxisWithGripper);
 
         /// <summary>
         /// The identifier for the LinAxisWithGripper_Skills_PickSkill_StateMachine_Start_InputArguments Variable.

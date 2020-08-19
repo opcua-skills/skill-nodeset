@@ -99,6 +99,31 @@ namespace Opc.Ua.Skills
         /// The identifier for the SkillStateMachineType_Suspend Method.
         /// </summary>
         public const uint SkillStateMachineType_Suspend = 15092;
+
+        /// <summary>
+        /// The identifier for the SkillType_StateMachine_Start Method.
+        /// </summary>
+        public const uint SkillType_StateMachine_Start = 15151;
+
+        /// <summary>
+        /// The identifier for the SkillType_StateMachine_Halt Method.
+        /// </summary>
+        public const uint SkillType_StateMachine_Halt = 15154;
+
+        /// <summary>
+        /// The identifier for the SkillType_StateMachine_Reset Method.
+        /// </summary>
+        public const uint SkillType_StateMachine_Reset = 15157;
+
+        /// <summary>
+        /// The identifier for the SkillType_StateMachine_Resume Method.
+        /// </summary>
+        public const uint SkillType_StateMachine_Resume = 15160;
+
+        /// <summary>
+        /// The identifier for the SkillType_StateMachine_Suspend Method.
+        /// </summary>
+        public const uint SkillType_StateMachine_Suspend = 15163;
     }
     #endregion
 
@@ -461,9 +486,19 @@ namespace Opc.Ua.Skills
         public const uint SkillStateMachineType_CurrentState_Id = 15068;
 
         /// <summary>
+        /// The identifier for the SkillStateMachineType_LastTransition Variable.
+        /// </summary>
+        public const uint SkillStateMachineType_LastTransition = 15072;
+
+        /// <summary>
         /// The identifier for the SkillStateMachineType_LastTransition_Id Variable.
         /// </summary>
         public const uint SkillStateMachineType_LastTransition_Id = 15073;
+
+        /// <summary>
+        /// The identifier for the SkillStateMachineType_LastTransition_TransitionTime Variable.
+        /// </summary>
+        public const uint SkillStateMachineType_LastTransition_TransitionTime = 15076;
 
         /// <summary>
         /// The identifier for the SkillStateMachineType_Start_InputArguments Variable.
@@ -601,9 +636,19 @@ namespace Opc.Ua.Skills
         public const uint SkillType_StateMachine_CurrentState_Id = 15139;
 
         /// <summary>
+        /// The identifier for the SkillType_StateMachine_LastTransition Variable.
+        /// </summary>
+        public const uint SkillType_StateMachine_LastTransition = 15143;
+
+        /// <summary>
         /// The identifier for the SkillType_StateMachine_LastTransition_Id Variable.
         /// </summary>
         public const uint SkillType_StateMachine_LastTransition_Id = 15144;
+
+        /// <summary>
+        /// The identifier for the SkillType_StateMachine_LastTransition_TransitionTime Variable.
+        /// </summary>
+        public const uint SkillType_StateMachine_LastTransition_TransitionTime = 15147;
 
         /// <summary>
         /// The identifier for the SkillType_StateMachine_Running_StateNumber Variable.
@@ -734,6 +779,31 @@ namespace Opc.Ua.Skills
         /// The identifier for the SkillStateMachineType_Suspend Method.
         /// </summary>
         public static readonly ExpandedNodeId SkillStateMachineType_Suspend = new ExpandedNodeId(Opc.Ua.Skills.Methods.SkillStateMachineType_Suspend, Opc.Ua.Skills.Namespaces.OpcUaSkills);
+
+        /// <summary>
+        /// The identifier for the SkillType_StateMachine_Start Method.
+        /// </summary>
+        public static readonly ExpandedNodeId SkillType_StateMachine_Start = new ExpandedNodeId(Opc.Ua.Skills.Methods.SkillType_StateMachine_Start, Opc.Ua.Skills.Namespaces.OpcUaSkills);
+
+        /// <summary>
+        /// The identifier for the SkillType_StateMachine_Halt Method.
+        /// </summary>
+        public static readonly ExpandedNodeId SkillType_StateMachine_Halt = new ExpandedNodeId(Opc.Ua.Skills.Methods.SkillType_StateMachine_Halt, Opc.Ua.Skills.Namespaces.OpcUaSkills);
+
+        /// <summary>
+        /// The identifier for the SkillType_StateMachine_Reset Method.
+        /// </summary>
+        public static readonly ExpandedNodeId SkillType_StateMachine_Reset = new ExpandedNodeId(Opc.Ua.Skills.Methods.SkillType_StateMachine_Reset, Opc.Ua.Skills.Namespaces.OpcUaSkills);
+
+        /// <summary>
+        /// The identifier for the SkillType_StateMachine_Resume Method.
+        /// </summary>
+        public static readonly ExpandedNodeId SkillType_StateMachine_Resume = new ExpandedNodeId(Opc.Ua.Skills.Methods.SkillType_StateMachine_Resume, Opc.Ua.Skills.Namespaces.OpcUaSkills);
+
+        /// <summary>
+        /// The identifier for the SkillType_StateMachine_Suspend Method.
+        /// </summary>
+        public static readonly ExpandedNodeId SkillType_StateMachine_Suspend = new ExpandedNodeId(Opc.Ua.Skills.Methods.SkillType_StateMachine_Suspend, Opc.Ua.Skills.Namespaces.OpcUaSkills);
     }
     #endregion
 
@@ -1096,9 +1166,19 @@ namespace Opc.Ua.Skills
         public static readonly ExpandedNodeId SkillStateMachineType_CurrentState_Id = new ExpandedNodeId(Opc.Ua.Skills.Variables.SkillStateMachineType_CurrentState_Id, Opc.Ua.Skills.Namespaces.OpcUaSkills);
 
         /// <summary>
+        /// The identifier for the SkillStateMachineType_LastTransition Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId SkillStateMachineType_LastTransition = new ExpandedNodeId(Opc.Ua.Skills.Variables.SkillStateMachineType_LastTransition, Opc.Ua.Skills.Namespaces.OpcUaSkills);
+
+        /// <summary>
         /// The identifier for the SkillStateMachineType_LastTransition_Id Variable.
         /// </summary>
         public static readonly ExpandedNodeId SkillStateMachineType_LastTransition_Id = new ExpandedNodeId(Opc.Ua.Skills.Variables.SkillStateMachineType_LastTransition_Id, Opc.Ua.Skills.Namespaces.OpcUaSkills);
+
+        /// <summary>
+        /// The identifier for the SkillStateMachineType_LastTransition_TransitionTime Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId SkillStateMachineType_LastTransition_TransitionTime = new ExpandedNodeId(Opc.Ua.Skills.Variables.SkillStateMachineType_LastTransition_TransitionTime, Opc.Ua.Skills.Namespaces.OpcUaSkills);
 
         /// <summary>
         /// The identifier for the SkillStateMachineType_Start_InputArguments Variable.
@@ -1236,9 +1316,19 @@ namespace Opc.Ua.Skills
         public static readonly ExpandedNodeId SkillType_StateMachine_CurrentState_Id = new ExpandedNodeId(Opc.Ua.Skills.Variables.SkillType_StateMachine_CurrentState_Id, Opc.Ua.Skills.Namespaces.OpcUaSkills);
 
         /// <summary>
+        /// The identifier for the SkillType_StateMachine_LastTransition Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId SkillType_StateMachine_LastTransition = new ExpandedNodeId(Opc.Ua.Skills.Variables.SkillType_StateMachine_LastTransition, Opc.Ua.Skills.Namespaces.OpcUaSkills);
+
+        /// <summary>
         /// The identifier for the SkillType_StateMachine_LastTransition_Id Variable.
         /// </summary>
         public static readonly ExpandedNodeId SkillType_StateMachine_LastTransition_Id = new ExpandedNodeId(Opc.Ua.Skills.Variables.SkillType_StateMachine_LastTransition_Id, Opc.Ua.Skills.Namespaces.OpcUaSkills);
+
+        /// <summary>
+        /// The identifier for the SkillType_StateMachine_LastTransition_TransitionTime Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId SkillType_StateMachine_LastTransition_TransitionTime = new ExpandedNodeId(Opc.Ua.Skills.Variables.SkillType_StateMachine_LastTransition_TransitionTime, Opc.Ua.Skills.Namespaces.OpcUaSkills);
 
         /// <summary>
         /// The identifier for the SkillType_StateMachine_Running_StateNumber Variable.
