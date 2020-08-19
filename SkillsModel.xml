@@ -109,21 +109,31 @@
         <Children>
 
             <!-- Methods -->
-            <Method SymbolicName="SKILLS:Start" TypeDefinition="SKILLS:SkillMethodType" ModellingRule="Optional"/>
-            <Method SymbolicName="SKILLS:Halt" TypeDefinition="SKILLS:SkillMethodType" ModellingRule="Optional"/>
-            <Method SymbolicName="SKILLS:Reset" TypeDefinition="SKILLS:SkillMethodType" ModellingRule="Optional"/>
-            <Method SymbolicName="SKILLS:Resume" TypeDefinition="SKILLS:SkillMethodType" ModellingRule="Optional"/>
-            <Method SymbolicName="SKILLS:Suspend" TypeDefinition="SKILLS:SkillMethodType" ModellingRule="Optional"/>
+            <Method SymbolicName="SKILLS:Start" TypeDefinition="SKILLS:SkillMethodType" ModellingRule="Mandatory"/>
+            <Method SymbolicName="SKILLS:Halt" TypeDefinition="SKILLS:SkillMethodType" ModellingRule="Mandatory"/>
+            <Method SymbolicName="SKILLS:Reset" TypeDefinition="SKILLS:SkillMethodType" ModellingRule="Mandatory"/>
+            <Method SymbolicName="SKILLS:Resume" TypeDefinition="SKILLS:SkillMethodType" ModellingRule="Mandatory"/>
+            <Method SymbolicName="SKILLS:Suspend" TypeDefinition="SKILLS:SkillMethodType" ModellingRule="Mandatory"/>
 
             <!-- States -->
-            <Object SymbolicName="SKILLS:Running" TypeDefinition="SKILLS:SkillStateType">
+            <Object SymbolicName="SKILLS:Running" TypeDefinition="SKILLS:SkillStateType" ModellingRule="Mandatory">
             </Object>
-            <Object SymbolicName="SKILLS:Ready" TypeDefinition="SKILLS:SkillStateType">
+            <Object SymbolicName="SKILLS:Ready" TypeDefinition="SKILLS:SkillStateType" ModellingRule="Mandatory">
             </Object>
-            <Object SymbolicName="SKILLS:Halted" TypeDefinition="SKILLS:SkillStateType">
+            <Object SymbolicName="SKILLS:Halted" TypeDefinition="SKILLS:SkillStateType" ModellingRule="Mandatory">
             </Object>
-            <Object SymbolicName="SKILLS:Suspended" TypeDefinition="SKILLS:SkillStateType">
+            <Object SymbolicName="SKILLS:Suspended" TypeDefinition="SKILLS:SkillStateType" ModellingRule="Mandatory">
             </Object>
+
+
+            <!-- Set optional members to mandatory -->
+            <Variable SymbolicName="OpcUa:LastTransition" TypeDefinition="OpcUa:TransitionVariableType"
+                      DataType="OpcUa:LocalizedText"
+                      ModellingRule="Mandatory" ValueRank="Scalar" AccessLevel="Read">
+                <Children>
+                    <Property SymbolicName="OpcUa:TransitionTime" DataType="OpcUa:UtcTime"  ModellingRule="Mandatory"/>
+                </Children>
+            </Variable>
 
             <!-- Transitions -->
             <Object SymbolicName="SKILLS:HaltedToReady" TypeDefinition="OpcUa:TransitionType">
